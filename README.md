@@ -19,4 +19,9 @@ The current hosting direction is the owner's Ubuntu home server, using Docker an
 
 Install dependencies with `npm install`, then start the local development server with `npm run dev`. Use `npm run build` to generate the static site in `dist/`, and `npm run preview` to preview that build locally.
 
+## Home server deployment
+
+The production container builds the Astro site and serves the generated files with Nginx. On the Ubuntu server, run `docker compose up -d --build`; the site is available on port `8085`. The planned Cloudflare Tunnel service URL is `http://192.168.18.100:8085`.
+
+
 
