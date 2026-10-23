@@ -9,6 +9,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
+| 2026-10-23 | LAUNCH-02 | User + Assistant | User configured the Cloudflare Tunnel published application route for `ejazhome.com`; public HTTPS request returned HTTP 200 and “Personal Website”. Done. | This commit; push after completion |
 | 2026-10-23 | PIPE-01 | User + Assistant | Added push-triggered GitHub Actions publishing to GHCR and a site-only systemd update timer. Verified the server pulled and ran image revision `b2aa7f1`; the site returned HTTP 200 and the original CasaOS Watchtower is healthy. Done. | `023d973`, `6c0f3c5`, `b2aa7f1`; completion record in this commit |
 | 2026-10-23 | HOST-02 | User + Assistant | Started the Docker service on the home server and confirmed LAN access returned HTTP 200. Done. | This commit; push after completion |
 | 2026-10-23 | HOST-01 | User + Assistant | Added Dockerfile, Nginx config, Compose service, and ignore rules for the static Astro site on port 8085. Done. | This commit; push after completion |
@@ -19,6 +20,7 @@
 | 2026-10-23 | DOC-AGENTS-01 | User + Assistant | Made project plan reading compulsory and added commit/push-after-each-task instructions. Done. | `9b1f38a` |
 | 2026-10-23 | TECH-01 | User + Assistant | Selected Astro after the owner confirmed the site will include a blog. Done. | `edbac83` |
 | 2026-10-23 | PLAN-INIT | Assistant | Created the project plan, initial scope, task tracker, and logs. Done. | `edbac83` |
+
 
 
 

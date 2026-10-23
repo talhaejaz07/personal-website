@@ -4,11 +4,11 @@ This repository contains the planning and, as work progresses, the source code f
 
 ## Project status
 
-The empty Astro scaffold is in place. It generates a static site; page content, the blog authoring workflow, design, and production hosting setup are still being decided.
+The blank Astro scaffold is deployed publicly. The domain `ejazhome.com` routes through Cloudflare Tunnel to the home server, and a live HTTPS request returned HTTP 200 with the page title “Personal Website”. Page content, design, and the blog authoring workflow are still being decided.
 
-## Planned hosting
+## Hosting
 
-The site now runs in Docker on the owner's Ubuntu home server. Nginx serves it on LAN port `8085`; `http://192.168.18.100:8085/` returned HTTP 200 during the LAN check. The Cloudflare Tunnel route for `ejazhome.com` is the remaining publishing step.
+The site runs in Docker on the owner's Ubuntu home server. Nginx serves it on LAN port `8085`; the Cloudflare Tunnel maps `ejazhome.com` to `http://192.168.18.100:8085`. Public HTTPS access is working.
 
 ## Project records
 
@@ -41,6 +41,7 @@ For a manual refresh, run:
 docker compose pull personal-website
 docker compose up -d --no-deps personal-website
 ```
+
 
 
 
