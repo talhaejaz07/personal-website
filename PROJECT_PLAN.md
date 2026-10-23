@@ -66,6 +66,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
+| DOC-README-01 | Discover and define | Add a repository README describing project status, decisions, and project records | Assistant | Done | Added `README.md` |
 | DISC-01 | Discover and define | Confirm the website's purpose, audience, and desired visitor actions | User + Assistant | Not started | |
 | DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | Not started | |
 | DISC-03 | Discover and define | Agree on constraints, success criteria, target launch timing, and maintenance needs | User + Assistant | Not started | |
@@ -99,6 +100,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-23 | Assistant | DOC-README-01 | Added `README.md` with the current project status, selected framework, proposed hosting direction, and links to project records. |
 | 2026-10-23 | User + Assistant | TECH-01 | Selected Astro for the personal website and blog; added a blog implementation task and an open question for the authoring workflow. |
 | 2026-10-23 | Assistant | — | Created this project plan and initial task tracker. No existing project files were present. |
 
@@ -121,5 +123,6 @@ Add questions that need an answer and blockers that prevent progress. Remove or 
 - [ ] Should blog posts be authored as Markdown files in the project, or through a CMS?
 - [ ] Are there preferred tools, a domain, or a hosting provider?
 - [ ] Is there a target date or other constraint we should plan around?
+
 
 
