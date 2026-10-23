@@ -10,7 +10,9 @@ This is the living project record for the personal website. It documents the wor
 - **Technology:** Astro with npm, generating a static site; supporting integrations and blog authoring workflow are still to be decided.
 - **Audience:** Friends and general visitors.
 - **Purpose:** Introduce who the owner is, showcase social profiles, and share writing through a blog.
-- **Content direction:** Lead with the owner's interest in PSX stock investing. He regularly shares investment posts on X and videos on YouTube, and also posts personal thoughts on X. Technology and a greener future, especially solar and batteries, are additional interests. The detailed bio remains private planning reference; only owner-approved selections belong on the site.\n- **Initial topic areas:** PSX investing and financial analysis as the main editorial focus; technology and the green-energy future (including solar and batteries) as secondary themes.\n- **Visual direction:** Still to be planned with the owner.
+- **Content direction:** Lead with the owner's interest in PSX stock investing. He regularly shares investment posts on X and videos on YouTube, and also posts personal thoughts on X. Technology and a greener future, especially solar and batteries, are additional interests. The detailed bio remains private planning reference; only owner-approved selections belong on the site.
+- **Initial topic areas:** PSX investing and financial analysis as the main editorial focus; technology and the green-energy future (including solar and batteries) as secondary themes.
+- **Visual direction:** Still to be planned with the owner.
 - **Last updated:** 2026-10-23
 
 ## Working agreements
