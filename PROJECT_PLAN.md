@@ -10,7 +10,7 @@ This is the living project record for the personal website. It documents the wor
 - **Technology:** Astro with npm, generating a static site; supporting integrations and blog authoring workflow are still to be decided.
 - **Audience:** Friends and general visitors.
 - **Purpose:** Introduce who the owner is, showcase social profiles, and share writing through a blog.
-- **Content direction:** A concise, selective personal introduction, with writing organized around a few owner-approved interests. The owner provided detailed background as private planning reference; the full text and personal details are not copied into this public repository or intended for the site by default.\n- **Initial topic areas to consider:** engineering and technology; web development, AI, and automation; self-hosting and home-server projects; plus optional broader interests for blog posts. Final emphasis is still for the owner to choose.\n- **Visual direction:** Still to be planned with the owner.
+- **Content direction:** Lead with the owner's interest in PSX stock investing. He regularly shares investment posts on X and videos on YouTube, and also posts personal thoughts on X. Technology and a greener future, especially solar and batteries, are additional interests. The detailed bio remains private planning reference; only owner-approved selections belong on the site.\n- **Initial topic areas:** PSX investing and financial analysis as the main editorial focus; technology and the green-energy future (including solar and batteries) as secondary themes.\n- **Visual direction:** Still to be planned with the owner.
 - **Last updated:** 2026-10-23
 
 ## Working agreements
@@ -43,7 +43,7 @@ Create a personal website with a blog using Astro, check it on common screen siz
 
 This outline is a proposal for owner review.
 
-- **Home:** Short introduction, a glimpse of personal interests, links to social profiles, and recent blog posts.
+- **Home:** Short introduction centered on PSX investing, links to X and YouTube, and recent writing.
 - **About:** Personal background and interests, written in the owner's voice.
 - **Blog:** Post index and individual articles.
 - **Socials:** A curated list of social profiles, starting with [X](https://x.com/TalhaEjaz07ee) and [YouTube](https://www.youtube.com/@TalhaEjaz). More can be added later.
@@ -85,7 +85,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | DOC-README-01 | Discover and define | Add a repository README describing project status, decisions, and project records | Assistant | Done | Added `README.md` |
 | SOCIAL-01 | Plan the experience | Choose social profiles to feature in the first release | User | Done | X: `@TalhaEjaz07ee`; YouTube: `@TalhaEjaz` |
 | DISC-01 | Discover and define | Confirm the website's purpose, audience, and desired visitor actions | User + Assistant | Done | Personal identity, social profiles, and writing for friends and general visitors; no job-search positioning |
-| DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | In progress | X and YouTube links collected; detailed background supplied as reference only. Need owner-approved short public bio/topic priorities and any images or brand references |
+| DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | In progress | X and YouTube links collected; PSX investing confirmed as the main focus, with technology and solar/batteries as secondary interests. Need approved short public bio and any images or brand references |
 | DISC-03 | Discover and define | Agree on constraints, success criteria, target launch timing, and maintenance needs | User + Assistant | Not started | |
 | PLAN-01 | Plan the experience | Draft the sitemap and navigation | Assistant, with User review | In progress | Draft proposes Home, About, Blog, and Socials; X and YouTube selected; review the structure and remaining content |
 | PLAN-02 | Plan the experience | Agree on visual direction and page-level requirements | User + Assistant | Not started | |
