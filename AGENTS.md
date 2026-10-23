@@ -9,6 +9,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
+| 2026-10-23 | PLAN-02 | User + Assistant | User provided the overall design reference and asked for detailed typography and color recommendations. Added a reviewable type system and color palette proposal to the project plan; awaiting owner approval before implementation. In progress. | This commit; push after completion |
 | 2026-10-23 | DISC-02 | User + Assistant | User provided detailed personal background as planning reference and clarified it should not all appear on the site. Recorded only broad candidate themes and a privacy note in the project plan; full text/private details were not copied to the public repo. In progress pending selection of public bio and topic priorities. | `ed5f795`, `db3f10a` |
 | 2026-10-23 | SOCIAL-01 | User | Selected X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) for the first release; other social profiles can be added later. Done. | This commit; push after completion |
 | 2026-10-23 | PLAN-01 | Assistant, with User review | Drafted Home, About, Blog, and Socials for the first release; waiting on social profile links and page/content review. In progress. | This commit; push after completion |
