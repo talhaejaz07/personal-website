@@ -123,6 +123,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | TECH-03 | Choose the implementation approach | Choose supporting dependencies and blog authoring/content workflow | User + Assistant | Not started | Consider Markdown files in the project or a CMS |
 | TECH-02 | Choose the implementation approach | Select domain, hosting, and deployment workflow | User + Assistant | Done | `ejazhome.com` uses the existing Cloudflare Tunnel to reach the home server; GitHub Actions and the server systemd timer publish updates |
 | HOME-01 | Create pages and content | Build the homepage using the approved visual system and owner-provided portrait | Assistant | Done | Responsive homepage added with PSX investing as the primary focus, X/YouTube links, secondary technology/green-energy interests, and an optimized transparent portrait. Build succeeded; live HTTPS returned HTTP 200 with the expected title and portrait asset on 2026-10-23 |
+| HERO-02 | Create pages and content | Use the owner's updated portrait image in the homepage hero | User + Assistant | In progress | Replaced the hero WebP with the newly supplied transparent portrait, optimized to 1100×1100; pending production build and live check |
 | FAVICON-01 | Create pages and content | Recolor and add the owner-provided logo as the site favicon | User + Assistant | In progress | Recolored the mark to warm ivory and coral, retained the transparent logo master, created a 64×64 favicon and 180×180 Apple touch icon on graphite, and linked both in the page head; pending build and live check |
 | BUILD-01 | Build the foundation | Set up the project structure and shared site shell | Assistant | Not started | |
 | BUILD-02 | Build the foundation | Implement responsive layout, navigation, and shared styles | Assistant | Not started | |
@@ -140,6 +141,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
+| 2026-10-23 | HERO-02 | Supplied an updated portrait and requested it be used in the hero section | Replaced the hero asset while preserving transparency and optimizing it as WebP | Review the live homepage after deployment |
 | 2026-10-23 | FAVICON-01 | Provided the Talha Ejaz logo and asked to recolor it to the approved scheme, shrink it, and use it as the favicon | Logo recolored to ivory and coral; prepared favicon and Apple touch icon | Review the live favicon after deployment |
 | 2026-10-23 | HOME-01 | Supplied a portrait to use in the homepage hero and asked for a homepage based on the approved design reference | Portrait placed in the hero; homepage follows the approved fonts/colors and leads with PSX investing, with social links and supporting interests | Review the homepage and suggest any content or layout changes |
 | 2026-10-23 | PLAN-02 | Approved the proposed typography and color scheme | Approved Barlow Condensed + DM Sans + optional DM Mono and the graphite/ivory/coral palette, with green/red reserved for investment performance | Implement the approved visual system in the site foundation |
@@ -154,6 +156,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-23 | Assistant | HERO-02 | Replaced the hero image with the newly supplied transparent portrait. Converted it to an 1100×1100 WebP (150,568 bytes) and visually checked the output. |
 | 2026-10-23 | Assistant | FAVICON-01 | Recolored the supplied logo to warm ivory and muted coral, retained a transparent master, generated compact favicon and Apple touch assets on graphite, and linked both in the page head. |
 | 2026-10-23 | Assistant | HOME-01 | Built a responsive Astro homepage using the approved visual system and owner-provided portrait. Added PSX-focused hero copy, external X/YouTube calls to action, focus cards, channel section, concise introduction, metadata, and footer. Converted the transparent PNG to WebP for the hero; production build succeeded and the public page returned HTTP 200 with the expected title and portrait asset. |
 | 2026-10-23 | User | PLAN-02 | Approved the proposed typography and color scheme: Barlow Condensed + DM Sans + optional DM Mono, graphite/ivory/coral palette, and restrained green/red for investment performance. |
@@ -176,6 +179,7 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 | Date | Decision | Reason | Impact / follow-up |
 |---|---|---|---|
+| 2026-10-23 | Use the newly supplied transparent portrait as the homepage hero image. | The owner requested this image for the hero section. | Optimized the portrait as `public/images/talha-ejaz-hero.webp`; verify the live site after deployment. |
 | 2026-10-23 | Use the owner-provided TE logo as the favicon, recolored in warm ivory and muted coral on a graphite tile. | The owner requested a smaller, palette-matched version of the supplied transparent logo for the favicon. | Keep the transparent recolored master in `public/images`; serve `public/favicon.png` and `public/apple-touch-icon.png` from the page head. |
 | 2026-10-23 | Use the owner-provided portrait in a dark, editorial hero and structure the homepage around PSX investing, social channels, and supporting interests. | The owner requested the portrait for the hero and a homepage inspired by the supplied reference; the project plan establishes PSX investing as the leading content focus. | First homepage uses the approved visual system and links to X and YouTube; review the page before expanding into the blog and other pages. |
 | 2026-10-23 | Approve the proposed Barlow Condensed + DM Sans + optional DM Mono type system and graphite/ivory/coral palette, with gain/loss colors reserved for investment performance. | The owner approved the visual recommendations for the site. | Use this system as the design foundation; verify text contrast and responsive typography during implementation. |
