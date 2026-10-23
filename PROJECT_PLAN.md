@@ -10,7 +10,7 @@ This is the living project record for the personal website. It documents the wor
 - **Technology:** Astro with npm, generating a static site; supporting integrations and blog authoring workflow are still to be decided.
 - **Audience:** Friends and general visitors.
 - **Purpose:** Introduce who the owner is, showcase social profiles, and share writing through a blog.
-- **Content and visual direction:** Still to be planned with the owner.
+- **Content direction:** A concise, selective personal introduction, with writing organized around a few owner-approved interests. The owner provided detailed background as private planning reference; the full text and personal details are not copied into this public repository or intended for the site by default.\n- **Initial topic areas to consider:** engineering and technology; web development, AI, and automation; self-hosting and home-server projects; plus optional broader interests for blog posts. Final emphasis is still for the owner to choose.\n- **Visual direction:** Still to be planned with the owner.
 - **Last updated:** 2026-10-23
 
 ## Working agreements
@@ -85,7 +85,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | DOC-README-01 | Discover and define | Add a repository README describing project status, decisions, and project records | Assistant | Done | Added `README.md` |
 | SOCIAL-01 | Plan the experience | Choose social profiles to feature in the first release | User | Done | X: `@TalhaEjaz07ee`; YouTube: `@TalhaEjaz` |
 | DISC-01 | Discover and define | Confirm the website's purpose, audience, and desired visitor actions | User + Assistant | Done | Personal identity, social profiles, and writing for friends and general visitors; no job-search positioning |
-| DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | In progress | X and YouTube links collected; still need a short bio, personal interests, and any images or brand references |
+| DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | In progress | X and YouTube links collected; detailed background supplied as reference only. Need owner-approved short public bio/topic priorities and any images or brand references |
 | DISC-03 | Discover and define | Agree on constraints, success criteria, target launch timing, and maintenance needs | User + Assistant | Not started | |
 | PLAN-01 | Plan the experience | Draft the sitemap and navigation | Assistant, with User review | In progress | Draft proposes Home, About, Blog, and Socials; X and YouTube selected; review the structure and remaining content |
 | PLAN-02 | Plan the experience | Agree on visual direction and page-level requirements | User + Assistant | Not started | |
