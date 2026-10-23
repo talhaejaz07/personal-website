@@ -9,7 +9,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
-| 2026-10-23 | DESIGN-03 | User + Assistant | User selected only the near-black, off-white, and red colors from a reference and reported a jumbled homepage header. Updated site color tokens and corrected the responsive header layout. Build and live verification pending. | this commit |
+| 2026-10-23 | DESIGN-03 | User + Assistant | User selected only the near-black, off-white, and red colors from a reference and reported a jumbled homepage header. Updated the site palette, logo colors, and responsive header layout; refreshed Markdown records and cache-busted icon URLs. Production build succeeded; public Home, Blog, article, stylesheet, and icon URLs returned HTTP 200. Done. | `a59709b`; this commit |
 | 2026-10-23 | BLOG-01 / BLOG-02 | User + Assistant | User requested the Blog header link, homepage latest-three section, blog index, and first MEBL article, with 16:9 cover and square card images. Preserved the article text exactly as provided. Build succeeded; LAN/public Home, Blog, article, and images returned HTTP 200. Done. | `8da9a76`, `e67f2f5` |
 | 2026-10-23 | DOC-AGENTS-03 | Assistant | Restored the complete project task history after documentation commit `a92d31b` left the file empty; retained prior entries and recorded the repair. Done. | `8da9a76`, `e67f2f5` |
 | 2026-10-23 | HERO-02 | User + Assistant | User supplied an updated transparent portrait for the homepage hero. Replaced the previous portrait, optimized it to WebP, built successfully, and verified the live hero asset at 150,568 bytes after server revision `b70ba1d`. Done. | `f9b5548`, `b70ba1d`, `7b62106` |
