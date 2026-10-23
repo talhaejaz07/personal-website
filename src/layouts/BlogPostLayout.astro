@@ -1,0 +1,139 @@
+---
+import type { MarkdownLayoutProps } from 'astro';
+
+interface Frontmatter {
+  title: string;
+  description: string;
+  pubDate: string;
+  category: string;
+  coverImage: string;
+  coverImageAlt: string;
+}
+
+type Props = MarkdownLayoutProps<Frontmatter>;
+const { frontmatter } = Astro.props;
+const date = new Date(`${frontmatter.pubDate}T00:00:00`).toLocaleDateString('en-PK', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#232326" />
+    <meta name="description" content={frontmatter.description} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={`${frontmatter.title} — Talha Ejaz`} />
+    <meta property="og:description" content={frontmatter.description} />
+    <meta property="og:image" content={`https://ejazhome.com${frontmatter.coverImage}`} />
+    <title>{frontmatter.title} — Talha Ejaz</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#article">Skip to article</a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Talha Ejaz home">
+        <span class="wordmark__name">TALHA EJAZ</span>
+        <span class="wordmark__sub">MARKETS &amp; IDEAS</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">HOME</a>
+        <a href="/blog/" aria-current="page">BLOG</a>
+        <a href="https://x.com/TalhaEjaz07ee" target="_blank" rel="me noreferrer">X <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="article" class="article-shell">
+      <a class="back-link" href="/blog/">← ALL ARTICLES</a>
+      <article>
+        <header class="article-heading">
+          <p class="eyebrow">{frontmatter.category} <span aria-hidden="true">·</span> {date}</p>
+          <h1>{frontmatter.title}</h1>
+        </header>
+        <figure class="article-cover">
+          <img src={frontmatter.coverImage} alt={frontmatter.coverImageAlt} width="1600" height="900" fetchpriority="high" decoding="async" />
+        </figure>
+        <div class="prose">
+          <slot />
+        </div>
+        <a class="back-link back-link--bottom" href="/blog/">← MORE ARTICLES</a>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark wordmark--footer" href="/">
+        <span class="wordmark__name">TALHA EJAZ</span>
+        <span class="wordmark__sub">MARKETS &amp; IDEAS</span>
+      </a>
+      <span>© {new Date().getFullYear()} TALHA EJAZ</span>
+      <a href="https://x.com/TalhaEjaz07ee" target="_blank" rel="me noreferrer">FOLLOW ON X ↗</a>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root { color-scheme: light; --graphite: #232326; --charcoal: #343338; --ivory: #f5f2ef; --coral: #e5a18f; --deep-coral: #a85443; --ink: #262427; --muted: #716c6b; --body: "DM Sans", Arial, sans-serif; --display: "Barlow Condensed", "Arial Narrow", sans-serif; --mono: "DM Mono", monospace; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--ivory); color: var(--ink); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible { outline: 3px solid var(--deep-coral); outline-offset: 4px; }
+  .skip-link { position: fixed; z-index: 5; top: 12px; left: 12px; padding: 12px 16px; background: white; transform: translateY(-150%); }
+  .skip-link:focus { transform: translateY(0); }
+  .site-header { display: flex; min-height: 90px; align-items: center; justify-content: space-between; gap: 24px; padding: 0 max(32px, calc((100vw - 1200px) / 2)); background: var(--graphite); color: var(--ivory); }
+  .wordmark { display: flex; flex-direction: column; gap: 3px; width: max-content; }
+  .wordmark__name { font-family: var(--display); font-size: 28px; font-weight: 700; letter-spacing: .025em; line-height: .9; }
+  .wordmark__sub { color: var(--coral); font-family: var(--mono); font-size: 8px; letter-spacing: .2em; }
+  nav { display: flex; align-items: center; gap: clamp(18px, 4vw, 46px); }
+  nav a { color: rgb(245 242 239 / 75%); font-size: 10px; font-weight: 600; letter-spacing: .11em; }
+  nav a:hover, nav a[aria-current="page"] { color: var(--coral); }
+  nav a span { margin-left: 3px; }
+  .article-shell { width: min(960px, calc(100% - 48px)); margin: 0 auto; padding: 50px 0 100px; }
+  .back-link { display: inline-flex; color: var(--deep-coral); font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: .1em; }
+  .article-heading { max-width: 850px; margin: 42px auto 30px; text-align: center; }
+  .eyebrow { margin: 0 0 18px; color: var(--deep-coral); font-size: 10px; font-weight: 700; letter-spacing: .17em; }
+  .article-heading h1 { margin: 0; color: var(--graphite); font-family: var(--display); font-size: clamp(48px, 8vw, 88px); font-weight: 700; line-height: .92; }
+  .article-cover { margin: 0 0 48px; overflow: hidden; background: var(--charcoal); }
+  .article-cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  .prose { max-width: 740px; margin: 0 auto; font-size: 17px; line-height: 1.8; }
+  .prose > :first-child { font-size: 20px; font-weight: 700; line-height: 1.55; }
+  .prose h2 { margin: 2.5em 0 .7em; color: var(--graphite); font-family: var(--display); font-size: clamp(34px, 5vw, 48px); font-weight: 700; line-height: 1; }
+  .prose h3 { margin: 2em 0 .55em; color: var(--deep-coral); font-size: 19px; line-height: 1.35; }
+  .prose p { margin: 0 0 1.25em; }
+  .prose a { color: var(--deep-coral); text-decoration: underline; text-underline-offset: 3px; }
+  .prose strong { color: var(--graphite); }
+  .prose table { width: 100%; margin: 1.7em 0; border-collapse: collapse; background: #fff; font-size: 14px; line-height: 1.55; }
+  .prose th, .prose td { padding: 12px 14px; border-bottom: 1px solid #e8e3e0; text-align: left; }
+  .prose th { background: var(--graphite); color: var(--ivory); font-size: 12px; }
+  .prose ul { padding-left: 1.35em; }
+  .prose li { margin: .55em 0; }
+  .prose em { color: var(--muted); }
+  .back-link--bottom { margin-top: 56px; }
+  .site-footer { display: flex; min-height: 100px; align-items: center; justify-content: space-between; gap: 20px; padding: 22px max(32px, calc((100vw - 1200px) / 2)); background: #1c1c1e; color: rgb(245 242 239 / 65%); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; }
+  .wordmark--footer .wordmark__name { color: var(--ivory); font-size: 22px; }
+  .wordmark--footer .wordmark__sub { font-size: 7px; }
+  .site-footer > a:last-child { color: var(--coral); }
+  @media (max-width: 600px) {
+    .site-header { min-height: 76px; padding-inline: 20px; }
+    .wordmark__name { font-size: 24px; }
+    nav { gap: 15px; }
+    nav a { font-size: 8px; }
+    .article-shell { width: calc(100% - 36px); padding-top: 32px; }
+    .article-heading { margin: 32px auto 22px; }
+    .article-cover { margin-bottom: 32px; }
+    .prose { font-size: 16px; }
+    .prose table { font-size: 12px; }
+    .prose th, .prose td { padding: 9px 8px; }
+    .site-footer { align-items: flex-start; flex-wrap: wrap; padding: 24px 20px; }
+    .site-footer > span { order: 3; width: 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>

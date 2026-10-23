@@ -1,0 +1,131 @@
+---
+import BlogCard from '../../components/BlogCard.astro';
+
+interface BlogFrontmatter {
+  title: string;
+  description: string;
+  pubDate: string;
+  category: string;
+  cardImage: string;
+  cardImageAlt: string;
+}
+
+interface MarkdownPage {
+  frontmatter: BlogFrontmatter;
+  url?: string;
+}
+
+const postModules = Object.entries(import.meta.glob<MarkdownPage>('./*.md', { eager: true }));
+const posts = postModules
+  .map(([path, post]) => ({
+    ...post.frontmatter,
+    href: post.url ? (post.url.endsWith('/') ? post.url : `${post.url}/`) : `/blog/${path.split('/').at(-1)?.replace(/\.md$/, '')}/`,
+  }))
+  .sort((a, b) => Date.parse(b.pubDate) - Date.parse(a.pubDate));
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#232326" />
+    <meta name="description" content="Personal notes and analysis on PSX investing, technology, and a greener future from Talha Ejaz." />
+    <title>Blog — Talha Ejaz</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Talha Ejaz home">
+        <span class="wordmark__name">TALHA EJAZ</span>
+        <span class="wordmark__sub">MARKETS &amp; IDEAS</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">HOME</a>
+        <a href="/blog/" aria-current="page">BLOG</a>
+        <a href="https://x.com/TalhaEjaz07ee" target="_blank" rel="me noreferrer">X <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main" class="blog-page">
+      <div class="blog-page__intro">
+        <p class="eyebrow"><span></span> NOTES · RESEARCH · IDEAS</p>
+        <h1>THE BLOG</h1>
+        <p>Company analysis, market observations, and ideas worth thinking through.</p>
+      </div>
+      <section class="post-list" aria-labelledby="posts-title">
+        <div class="post-list__heading">
+          <h2 id="posts-title">All articles</h2>
+          <span>{posts.length} {posts.length === 1 ? 'ARTICLE' : 'ARTICLES'}</span>
+        </div>
+        {posts.length > 0 ? (
+          <div class="post-grid">
+            {posts.map((post) => <BlogCard post={post} href={post.href} />)}
+          </div>
+        ) : (
+          <p class="empty-state">New writing will appear here.</p>
+        )}
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark wordmark--footer" href="/">
+        <span class="wordmark__name">TALHA EJAZ</span>
+        <span class="wordmark__sub">MARKETS &amp; IDEAS</span>
+      </a>
+      <span>© {new Date().getFullYear()} TALHA EJAZ</span>
+      <a href="https://x.com/TalhaEjaz07ee" target="_blank" rel="me noreferrer">FOLLOW ON X ↗</a>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root { color-scheme: light; --graphite: #232326; --ivory: #f5f2ef; --coral: #e5a18f; --deep-coral: #a85443; --ink: #262427; --muted: #716c6b; --display: "Barlow Condensed", "Arial Narrow", sans-serif; --body: "DM Sans", Arial, sans-serif; --mono: "DM Mono", monospace; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ivory); color: var(--ink); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible { outline: 3px solid var(--deep-coral); outline-offset: 4px; }
+  .skip-link { position: fixed; z-index: 5; top: 12px; left: 12px; padding: 12px 16px; background: #fff; transform: translateY(-150%); }
+  .skip-link:focus { transform: translateY(0); }
+  .site-header { display: flex; min-height: 90px; align-items: center; justify-content: space-between; gap: 24px; padding: 0 max(32px, calc((100vw - 1200px) / 2)); background: var(--graphite); color: var(--ivory); }
+  .wordmark { display: flex; flex-direction: column; gap: 3px; width: max-content; }
+  .wordmark__name { font-family: var(--display); font-size: 28px; font-weight: 700; letter-spacing: .025em; line-height: .9; }
+  .wordmark__sub { color: var(--coral); font-family: var(--mono); font-size: 8px; letter-spacing: .2em; }
+  nav { display: flex; align-items: center; gap: clamp(18px, 4vw, 46px); }
+  nav a { color: rgb(245 242 239 / 75%); font-size: 10px; font-weight: 600; letter-spacing: .11em; }
+  nav a:hover, nav a[aria-current="page"] { color: var(--coral); }
+  nav a span { margin-left: 3px; }
+  .blog-page { min-height: 68vh; padding-bottom: 100px; }
+  .blog-page__intro { padding: 94px 24px 82px; background: var(--graphite); color: var(--ivory); text-align: center; }
+  .eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 18px; color: var(--coral); font-size: 10px; font-weight: 700; letter-spacing: .17em; }
+  .eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .blog-page__intro h1 { margin: 0; color: var(--ivory); font-family: var(--display); font-size: clamp(74px, 12vw, 132px); font-weight: 700; line-height: .8; }
+  .blog-page__intro > p:last-child { max-width: 500px; margin: 22px auto 0; color: rgb(245 242 239 / 70%); font-size: 15px; line-height: 1.7; }
+  .post-list { width: min(1200px, calc(100% - 48px)); margin: 0 auto; padding-top: 64px; }
+  .post-list__heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-bottom: 1px solid #ddd7d3; padding-bottom: 16px; }
+  .post-list__heading h2 { margin: 0; color: var(--ink); font-family: var(--display); font-size: 38px; line-height: 1; }
+  .post-list__heading span { color: var(--deep-coral); font-family: var(--mono); font-size: 9px; letter-spacing: .12em; }
+  .post-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding-top: 30px; }
+  .empty-state { color: var(--muted); }
+  .site-footer { display: flex; min-height: 100px; align-items: center; justify-content: space-between; gap: 20px; padding: 22px max(32px, calc((100vw - 1200px) / 2)); background: #1c1c1e; color: rgb(245 242 239 / 65%); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; }
+  .wordmark--footer .wordmark__name { color: var(--ivory); font-size: 22px; }
+  .wordmark--footer .wordmark__sub { font-size: 7px; }
+  .site-footer > a:last-child { color: var(--coral); }
+  @media (max-width: 900px) { .post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px) {
+    .site-header { min-height: 76px; padding-inline: 20px; }
+    .wordmark__name { font-size: 24px; }
+    nav { gap: 15px; }
+    nav a { font-size: 8px; }
+    .blog-page__intro { padding: 72px 20px 64px; }
+    .post-list { width: calc(100% - 36px); padding-top: 42px; }
+    .post-grid { grid-template-columns: 1fr; gap: 16px; }
+    .site-footer { align-items: flex-start; flex-wrap: wrap; padding: 24px 20px; }
+    .site-footer > span { order: 3; width: 100%; }
+  }
+</style>
