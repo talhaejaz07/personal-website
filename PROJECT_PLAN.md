@@ -107,6 +107,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
+| DESIGN-06 | Review and refine | Make blog and article headers transparent while keeping navigation legible | Assistant | In progress | Remove the near-black header fill and use readable dark navigation on the light page background. |
 | DESIGN-05 | Review and refine | Clean up homepage footer spacing and correct the content layout | Assistant | Done | Reset inherited footer flex styles on Home so the social section and copyright row stack in the centered 1,200px content area. `npm run build` succeeded; GitHub Actions passed; public page serves the new CSS and rendered footer at 1,200px wide without horizontal overflow. |
 | DESIGN-04 | Review and refine | Fix homepage header spacing and improve primary button text contrast | Assistant | Done | Reset inherited header padding/alignment on Home and use a deep-red primary button with off-white text. `npm run build` succeeded; GitHub Actions run 46 succeeded; public homepage returned HTTP 200 and serves the corrected stylesheet. |
 | DESIGN-03 | Review and refine | Apply the owner-selected near-black/off-white/red palette and repair the homepage header layout | Assistant | Done | Updated Home, Blog, article, cards, and logo assets; versioned icon URLs to bypass Cloudflare cache. `npm run build` succeeded, GitHub Actions completed successfully, and public Home, Blog, article, CSS, and icons returned HTTP 200. |
@@ -146,6 +147,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
+| 2026-10-23 | DESIGN-06 | Asked to remove `background: var(--near-black)` from `.site-header`, preferring a transparent header. | Removing the dark fill on blog and article pages requires adjusting the navigation text color for contrast against their light background. | Review after deploy |
 | 2026-10-23 | DESIGN-05 | Shared a screenshot circling the footer and asked to clean up spacing and fix text crowding against the edges. | Footer rows now stack in the centered 1,200px container; verified on the live site with no horizontal overflow. | Done |
 | 2026-10-23 | DESIGN-04 | Shared a screenshot circling the overlapping homepage header items and the dark text on the red hero button; asked to correct the header and lighten the button text. | Fixed the homepage grid overrides and changed the button to deep red with off-white text; public homepage and deployed CSS confirmed over HTTPS. | Done |
 | 2026-10-23 | DESIGN-03 | Selected a near-black, off-white, and vivid red palette from a supplied reference and asked to use only its colors; reported that the homepage header was jumbled and requested updating palette references in Markdown docs. | Palette and responsive homepage header updated; README and project plan now reflect the new palette. Public Home, Blog, and article pages, the new CSS asset, and versioned icons returned HTTP 200. | Done |
@@ -165,6 +167,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-23 | Assistant | DESIGN-06 | Started removing the near-black background from the blog and article headers; updating nav text color to remain legible on the light page background. |
 | 2026-10-23 | Assistant | DESIGN-05 | Inspected the live footer and traced its two-column jumble to global `.site-footer` flex rules leaking into the homepage footer. Reset the home footer to a block layout so its social and copyright rows stack inside the centered 1,200px content container. `npm run build` succeeded, GitHub Actions passed, and the live footer is deployed with no horizontal overflow. |
 | 2026-10-23 | Assistant | DESIGN-04 | Measured the live header and traced the overlap to global blog CSS adding large horizontal padding and `space-between` to the homepage grid. Reset those inherited settings on Home and changed the primary button to deep red with off-white text. `npm run build` succeeded, GitHub Actions run 46 succeeded, and the public homepage returned HTTP 200 with the corrected stylesheet. |
 | 2026-10-23 | Assistant | DESIGN-03 | Replaced the old palette with near-black, off-white, and vivid red across the homepage, blog index, article, cards, and favicon assets. Rebuilt the homepage header into a balanced desktop grid and a two-row mobile layout. Updated palette records in README and PROJECT_PLAN. Production build and GitHub Actions succeeded; public Home, Blog, article, stylesheet, and versioned icon URLs returned HTTP 200. |
