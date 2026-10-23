@@ -6,8 +6,8 @@ This is the living project record for the personal website. It documents the wor
 
 - **Project:** Personal website
 - **Goal:** Plan, build, verify, and publish a personal website that represents its owner and serves the goals we agree on.
-- **Current state:** The Astro homepage is running on the home server and is publicly reachable at `https://ejazhome.com/` through Cloudflare Tunnel. A live request returned HTTP 200 with title “Talha Ejaz — Investing with perspective” and the hero portrait asset.
-- **Technology:** Astro with npm, generating a static site; supporting integrations and blog authoring workflow are still to be decided.
+- **Current state:** The Astro homepage, blog index, and first MEBL article are live on the home server at `https://ejazhome.com/` through Cloudflare Tunnel. Homepage, blog, post, and title images returned HTTP 200 on 2026-10-23.
+- **Technology:** Astro with npm, generating a static site; blog posts are authored as Markdown pages in `src/pages/blog/`.
 - **Audience:** Friends and general visitors.
 - **Purpose:** Introduce who the owner is, showcase social profiles, and share writing through a blog.
 - **Content direction:** Lead with the owner's interest in PSX stock investing. He regularly shares investment posts on X and videos on YouTube, and also posts personal thoughts on X. Technology and a greener future, especially solar and batteries, are additional interests. The detailed bio remains private planning reference; only owner-approved selections belong on the site.
@@ -83,7 +83,7 @@ A separate projects or résumé page is outside the current plan. We can add a p
 
 - Required pages and final copy
 - Design references, colors, typography, and imagery
-- Supporting dependencies and blog content-management/authoring approach
+- Whether a CMS is needed later, beyond the current Markdown workflow
 - Analytics, cookies, privacy notices, and form handling
 - Browser/device support targets
 - Launch timing and ongoing maintenance expectations
@@ -112,7 +112,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | HOST-01 | Prepare and launch | Add a Docker/Nginx production service on port 8085 | Assistant | Done | Multi-stage Astro build and static Nginx service added |
 | BUILD-00 | Build the foundation | Initialize an empty Astro project scaffold | Assistant | Done | Installed Astro and added the root route, config, TypeScript config, npm scripts, and lockfile; no page content added |
 | DOC-README-01 | Discover and define | Add a repository README describing project status, decisions, and project records | Assistant | Done | Added `README.md` |
-| DOC-AGENTS-03 | Discover and define | Restore and preserve the complete project task history in `AGENTS.md` | Assistant | In progress | Restored from the previous complete commit after a documentation update left the file empty; task references are being finalized |
+| DOC-AGENTS-03 | Discover and define | Restore and preserve the complete project task history in `AGENTS.md` | Assistant | Done | Restored the complete prior task history after a documentation commit left the file empty; added and pushed the repair record |
 | SOCIAL-01 | Plan the experience | Choose social profiles to feature in the first release | User | Done | X: `@TalhaEjaz07ee`; YouTube: `@TalhaEjaz` |
 | DISC-01 | Discover and define | Confirm the website's purpose, audience, and desired visitor actions | User + Assistant | Done | Personal identity, social profiles, and writing for friends and general visitors; no job-search positioning |
 | DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | In progress | X and YouTube links collected; PSX investing confirmed as the main focus, with technology and solar/batteries as secondary interests. Need approved short public bio and any images or brand references |
@@ -121,7 +121,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | PLAN-02 | Plan the experience | Agree on visual direction and page-level requirements | User + Assistant | Done | Owner approved the Barlow Condensed + DM Sans + optional DM Mono system and graphite/ivory/coral palette on 2026-10-23 |
 | PLAN-03 | Plan the experience | Identify accessibility, privacy, SEO, and performance requirements | Assistant, with User review | Not started | |
 | TECH-01 | Choose the implementation approach | Select the site framework | User + Assistant | Done | Astro selected on 2026-10-23 |
-| TECH-03 | Choose the implementation approach | Choose supporting dependencies and blog authoring/content workflow | User + Assistant | In progress | Implementing Astro Markdown files as the initial blog authoring workflow; confirm with owner through this requested article implementation |
+| TECH-03 | Choose the implementation approach | Choose supporting dependencies and blog authoring/content workflow | User + Assistant | Done | Chose Astro Markdown pages in `src/pages/blog/`; article frontmatter supplies index and homepage card metadata, while Astro renders static HTML |
 | TECH-02 | Choose the implementation approach | Select domain, hosting, and deployment workflow | User + Assistant | Done | `ejazhome.com` uses the existing Cloudflare Tunnel to reach the home server; GitHub Actions and the server systemd timer publish updates |
 | HOME-01 | Create pages and content | Build the homepage using the approved visual system and owner-provided portrait | Assistant | Done | Responsive homepage added with PSX investing as the primary focus, X/YouTube links, secondary technology/green-energy interests, and an optimized transparent portrait. Build succeeded; live HTTPS returned HTTP 200 with the expected title and portrait asset on 2026-10-23 |
 | HERO-02 | Create pages and content | Use the owner's updated portrait image in the homepage hero | User + Assistant | Done | Replaced the previous hero portrait with the newly supplied transparent image, optimized as an 1100×1100 WebP (150,568 bytes). Build succeeded; live homepage returned HTTP 200 and the hero asset returned HTTP 200 at 150,568 bytes on 2026-10-23 |
@@ -129,8 +129,8 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | BUILD-01 | Build the foundation | Set up the project structure and shared site shell | Assistant | Not started | |
 | BUILD-02 | Build the foundation | Implement responsive layout, navigation, and shared styles | Assistant | Not started | |
 | BUILD-03 | Create pages and content | Build each agreed page and add owner-approved content and assets | Assistant, with User content/review | Not started | Add one task row per page/features once scope is agreed |
-| BLOG-01 | Create pages and content | Implement the blog index, post pages, and agreed post-authoring workflow | Assistant, with User content/review | In progress | Use Markdown pages in `src/pages/blog/` with frontmatter, an Astro layout, and post images; first post is the owner-provided MEBL analysis |
-| BLOG-02 | Create pages and content | Add a Blog link to the homepage header and show up to three latest posts on the homepage | Assistant | In progress | Latest cards use each Markdown post's frontmatter and square thumbnail; verify responsive layout and generated links |
+| BLOG-01 | Create pages and content | Implement the blog index, post pages, and agreed post-authoring workflow | Assistant, with User content/review | Done | Added `/blog/` and `/blog/mebl-stock-analysis/` as Markdown-driven static pages. Kept the supplied article text unchanged; 16:9 cover and square card image returned HTTP 200. Build succeeded and LAN/public pages returned HTTP 200 on 2026-10-23 |
+| BLOG-02 | Create pages and content | Add a Blog link to the homepage header and show up to three latest posts on the homepage | Assistant | Done | Added the header link and date-sorted latest-three card section; the MEBL post appears on Home. Build succeeded and LAN/public homepage returned HTTP 200 on 2026-10-23 |
 | REVIEW-01 | Review and refine | Review content, links, layout, and behavior on target screen sizes | User + Assistant | Not started | |
 | REVIEW-02 | Review and refine | Address agreed accessibility, metadata, and performance findings | Assistant | Not started | |
 | LAUNCH-01 | Prepare and launch | Configure production settings and deployment | Assistant, with User input as needed | Done | Docker on port 8085; GitHub Actions publishes the image and a systemd timer updates the server |
@@ -143,7 +143,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
-| 2026-10-23 | BLOG-01 / BLOG-02 | Requested a blog page, Blog header link, homepage section with up to three latest posts, and supplied the complete MEBL article plus 16:9 and square title images | Implementing the first article in Astro Markdown and using the 16:9 image for the post cover and square image for cards; user instructed to keep article text unchanged | Review the published post and blog presentation |
+| 2026-10-23 | BLOG-01 / BLOG-02 | Requested a blog page, Blog header link, homepage section with up to three latest posts, and supplied the complete MEBL article plus 16:9 and square title images; clarified that the article text must not be changed | Published the exact supplied copy as a Markdown article. The 16:9 image is the cover and the square image is used for cards; public Home, Blog, and article pages returned HTTP 200 | Done |
 | 2026-10-23 | HERO-02 | Supplied an updated portrait and requested it be used in the hero section | Replaced the previous portrait; live homepage and 150,568-byte hero WebP returned HTTP 200 after deployment | Done |
 | 2026-10-23 | FAVICON-01 | Provided the Talha Ejaz logo and asked to recolor it to the approved scheme, shrink it, and use it as the favicon | Logo recolored to ivory and coral; live favicon and Apple touch icon returned HTTP 200 after deployment | Done |
 | 2026-10-23 | HOME-01 | Supplied a portrait to use in the homepage hero and asked for a homepage based on the approved design reference | Portrait placed in the hero; homepage follows the approved fonts/colors and leads with PSX investing, with social links and supporting interests | Review the homepage and suggest any content or layout changes |
@@ -151,7 +151,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 | 2026-10-23 | SOCIAL-01 | Chose X and YouTube as the social profiles to show for now | [X](https://x.com/TalhaEjaz07ee), [YouTube](https://www.youtube.com/@TalhaEjaz) | Add other profiles later if wanted |
 | 2026-10-23 | DISC-01 | Clarified that the website is for personal expression, social profiles, and a blog; the audience is friends and general visitors | Agreed on a personal, interest-led site without job-search positioning | Share social profile links and content preferences in DISC-02 |
 | 2026-10-23 | LAUNCH-02 | Added the `ejazhome.com` published application route in Cloudflare Tunnel | Screenshot shows the route to `http://192.168.18.100:8085`; live HTTPS check returned HTTP 200 | Continue site content and design work |
-| 2026-10-23 | TECH-01 | Chose Astro after confirming the site will include a blog | Astro selected as the site framework | Decide the blog authoring workflow in TECH-03 |
+| 2026-10-23 | TECH-01 | Chose Astro after confirming the site will include a blog | Astro selected as the site framework | Markdown authoring workflow recorded in TECH-03 |
 
 ## Activity log
 
@@ -159,6 +159,8 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-23 | Assistant | BLOG-01 / BLOG-02 | Added the Blog header link, date-sorted latest-three section on Home, Markdown blog index, and MEBL stock analysis page. Preserved the article copy as supplied. Used the square image for cards and the 16:9 image for the post cover. `npm run build` succeeded; LAN and public Home/Blog/article pages and the two images returned HTTP 200. |
+| 2026-10-23 | Assistant | DOC-AGENTS-03 | Restored the complete `AGENTS.md` task history from commit `7b62106` after a documentation commit left the file empty; added a repair record and task references. |
 | 2026-10-23 | User + Assistant | BLOG-01 / BLOG-02 | User supplied the MEBL article and two appropriately sized title images, requested a Blog header link, a blog index, and up to three latest post cards on Home, and specified the post text must remain unchanged. Started implementing the Markdown-based blog workflow. |
 | 2026-10-23 | Assistant | HERO-02 | Replaced the hero image with the newly supplied transparent portrait. Converted it to an 1100×1100 WebP (150,568 bytes), visually checked it, and confirmed the live hero asset returned HTTP 200 at the expected size after server revision `b70ba1d`. |
 | 2026-10-23 | Assistant | FAVICON-01 | Recolored the supplied logo to warm ivory and muted coral, retained a transparent master, generated compact favicon and Apple touch assets on graphite, and linked both in the page head. Build succeeded; both live icon URLs returned HTTP 200. |
@@ -183,6 +185,8 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 | Date | Decision | Reason | Impact / follow-up |
 |---|---|---|---|
+| 2026-10-23 | Author blog posts as Markdown pages under `src/pages/blog/`. | The site uses Astro and the owner asked to publish a first long-form post. | Astro generates static post pages; frontmatter drives the blog index and homepage cards without client-side JavaScript. |
+| 2026-10-23 | Preserve the MEBL article text exactly as supplied by the owner. | The owner explicitly instructed not to change the blog text. | Present the provided title, analysis, tables, YouTube links, and disclaimer without editorial changes. |
 | 2026-10-23 | Use the newly supplied transparent portrait as the homepage hero image. | The owner requested this image for the hero section. | Optimized the portrait as `public/images/talha-ejaz-hero.webp`; verify the live site after deployment. |
 | 2026-10-23 | Use the owner-provided TE logo as the favicon, recolored in warm ivory and muted coral on a graphite tile. | The owner requested a smaller, palette-matched version of the supplied transparent logo for the favicon. | Keep the transparent recolored master in `public/images`; serve `public/favicon.png` and `public/apple-touch-icon.png` from the page head. |
 | 2026-10-23 | Use the owner-provided portrait in a dark, editorial hero and structure the homepage around PSX investing, social channels, and supporting interests. | The owner requested the portrait for the hero and a homepage inspired by the supplied reference; the project plan establishes PSX investing as the leading content focus. | First homepage uses the approved visual system and links to X and YouTube; review the page before expanding into the blog and other pages. |
@@ -199,5 +203,4 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 Add questions that need an answer and blockers that prevent progress. Remove or mark entries resolved when addressed.
 
 - [ ] Which pages and content should the first version include?
-- [ ] Should blog posts be authored as Markdown files in the project, or through a CMS?
 - [ ] Is there a target date or other constraint we should plan around?
