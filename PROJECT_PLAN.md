@@ -8,7 +8,9 @@ This is the living project record for the personal website. It documents the wor
 - **Goal:** Plan, build, verify, and publish a personal website that represents its owner and serves the goals we agree on.
 - **Current state:** The blank Astro scaffold is running on the home server and is publicly reachable at `https://ejazhome.com/` through Cloudflare Tunnel. A live request returned HTTP 200 and the page title “Personal Website”.
 - **Technology:** Astro with npm, generating a static site; supporting integrations and blog authoring workflow are still to be decided.
-- **Audience, content, visual direction, and hosting:** To be decided with the owner.
+- **Audience:** Friends and general visitors.
+- **Purpose:** Introduce who the owner is, showcase social profiles, and share writing through a blog.
+- **Content and visual direction:** Still to be planned with the owner.
 - **Last updated:** 2026-10-23
 
 ## Working agreements
@@ -23,19 +25,30 @@ This is the living project record for the personal website. It documents the wor
 
 ## Scope and requirements
 
-### Goals to confirm
+### Agreed goals
 
-- What the website should help you accomplish (for example, introduce you, showcase work, publish writing, or provide contact details).
-- Who the intended visitors are and what you want them to do.
-- Which pages and content are needed.
-- The tone, visual style, and any existing brand assets to use.
-- Whether the site needs features such as a contact form, blog, project filtering, or downloadable résumé.
+- Help visitors get to know the owner through personal interests, voice, and writing.
+- Give friends and general visitors a clear way to read the blog and follow social profiles.
+- Build a personal brand centered on identity and interests, without job-search positioning.
+- Decide which pages, content, visual style, and brand assets to include.
+- Decide whether extra features such as a contact form or downloadable materials belong on the site.
 - For the blog, how posts should be written and organized (for example, Markdown files in the project or a content-management system).
 - Any requirements for languages, accessibility, privacy, maintenance, budget, or launch date.
 
 ### Initial scope
 
-The working scope is to produce a clear plan, implement a personal website with a blog using Astro, check it on common screen sizes, and prepare it for deployment. The specific pages, blog authoring workflow, and hosting remain open until agreed. Anything beyond the agreed scope should be added here and reviewed before it is treated as required work.
+Create a personal website with a blog using Astro, check it on common screen sizes, and maintain the existing deployment. The site will introduce the owner, showcase social profiles, and share writing for friends and general visitors. It is an expression of the owner's personal identity and interests, without job-search positioning.
+
+### Draft first-release sitemap
+
+This outline is a proposal for owner review.
+
+- **Home:** Short introduction, a glimpse of personal interests, links to social profiles, and recent blog posts.
+- **About:** Personal background and interests, written in the owner's voice.
+- **Blog:** Post index and individual articles.
+- **Socials:** A curated list of social profiles, with short descriptions if useful.
+
+A separate projects or résumé page is outside the current plan. We can add a personal-interest page later if the owner wants one.
 
 ### Not yet specified
 
@@ -70,10 +83,10 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | HOST-01 | Prepare and launch | Add a Docker/Nginx production service on port 8085 | Assistant | Done | Multi-stage Astro build and static Nginx service added |
 | BUILD-00 | Build the foundation | Initialize an empty Astro project scaffold | Assistant | Done | Installed Astro and added the root route, config, TypeScript config, npm scripts, and lockfile; no page content added |
 | DOC-README-01 | Discover and define | Add a repository README describing project status, decisions, and project records | Assistant | Done | Added `README.md` |
-| DISC-01 | Discover and define | Confirm the website's purpose, audience, and desired visitor actions | User + Assistant | Not started | |
-| DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | Not started | |
+| DISC-01 | Discover and define | Confirm the website's purpose, audience, and desired visitor actions | User + Assistant | Done | Personal identity, social profiles, and writing for friends and general visitors; no job-search positioning |
+| DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | In progress | Collect social profile links, short bio, interests, and any images or brand references |
 | DISC-03 | Discover and define | Agree on constraints, success criteria, target launch timing, and maintenance needs | User + Assistant | Not started | |
-| PLAN-01 | Plan the experience | Draft the sitemap and navigation | Assistant, with User review | Not started | Depends on DISC-01 and DISC-02 |
+| PLAN-01 | Plan the experience | Draft the sitemap and navigation | Assistant, with User review | In progress | Draft proposes Home, About, Blog, and Socials; confirm after gathering profile links and content |
 | PLAN-02 | Plan the experience | Agree on visual direction and page-level requirements | User + Assistant | Not started | |
 | PLAN-03 | Plan the experience | Identify accessibility, privacy, SEO, and performance requirements | Assistant, with User review | Not started | |
 | TECH-01 | Choose the implementation approach | Select the site framework | User + Assistant | Done | Astro selected on 2026-10-23 |
@@ -95,6 +108,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
+| 2026-10-23 | DISC-01 | Clarified that the website is for personal expression, social profiles, and a blog; the audience is friends and general visitors | Agreed on a personal, interest-led site without job-search positioning | Share social profile links and content preferences in DISC-02 |
 | 2026-10-23 | LAUNCH-02 | Added the `ejazhome.com` published application route in Cloudflare Tunnel | Screenshot shows the route to `http://192.168.18.100:8085`; live HTTPS check returned HTTP 200 | Continue site content and design work |
 | 2026-10-23 | TECH-01 | Chose Astro after confirming the site will include a blog | Astro selected as the site framework | Decide the blog authoring workflow in TECH-03 |
 
@@ -104,6 +118,8 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-23 | User + Assistant | DISC-01 | Agreed the website should express who the owner is, showcase social profiles, and share writing with friends and general visitors. It will not use job-search framing. |
+| 2026-10-23 | Assistant | PLAN-01 | Drafted a first-release sitemap with Home, About, Blog, and Socials, pending the owner's social links and review. |
 | 2026-10-23 | User + Assistant | LAUNCH-02 | User configured the Cloudflare Tunnel route `ejazhome.com` to `http://192.168.18.100:8085`; a live HTTPS request returned HTTP 200 with title “Personal Website”. |
 | 2026-10-23 | User + Assistant | PIPE-01 | Verified the GitHub Actions build for `b2aa7f1` published to GHCR and the systemd timer deployed that exact revision. The site returned HTTP 200 and the original CasaOS Watchtower is healthy. The timer polls every 60 seconds; the conflicting second Watchtower was removed and the original service restored. |
 | 2026-10-23 | User + Assistant | HOST-02 | Launched `personal-website` on the Ubuntu server; container is up and the workstation received HTTP 200 from `http://192.168.18.100:8085/`. |
@@ -119,6 +135,7 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 | Date | Decision | Reason | Impact / follow-up |
 |---|---|---|---|
+| 2026-10-23 | Shape the website around personal identity, social profiles, and blog writing for friends and general visitors. | The owner wants the site to show who they are and share their writing. | Use an interest-led personal brand without job-search positioning; review the proposed Home, About, Blog, and Socials pages. |
 | 2026-10-23 | Publish container images with GitHub Actions and use a systemd timer on the home server to pull updates every 60 seconds. | The server should update from Git pushes without exposing a new inbound service; running a second Watchtower conflicted with CasaOS's existing Watchtower. | The timer updates only `personal-website`; GHCR package is publicly pullable. |
 | 2026-10-23 | Host the static Astro site on the Ubuntu home server and publish through the existing Cloudflare Tunnel at `ejazhome.com`. | The owner already runs a Cloudflare Tunnel and configured a published application route for the website. | The route sends requests to `http://192.168.18.100:8085`; public HTTPS returned HTTP 200. |
 | 2026-10-23 | Use Astro to build the personal website and blog. | The owner plans to add a blog; Astro can generate static pages suitable for the home server. | Choose supporting dependencies and the blog authoring workflow in TECH-03. |
@@ -133,6 +150,7 @@ Add questions that need an answer and blockers that prevent progress. Remove or 
 - [ ] What design references, style, or assets should guide it?
 - [ ] Should blog posts be authored as Markdown files in the project, or through a CMS?
 - [ ] Is there a target date or other constraint we should plan around?
+
 
 
 
