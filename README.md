@@ -8,7 +8,7 @@ The empty Astro scaffold is in place. It generates a static site; page content, 
 
 ## Planned hosting
 
-The current hosting direction is the owner's Ubuntu home server, using Docker and the existing Cloudflare Tunnel. Tunnel routing and production deployment have not been configured yet.
+The site now runs in Docker on the owner's Ubuntu home server. Nginx serves it on LAN port `8085`; `http://192.168.18.100:8085/` returned HTTP 200 during the LAN check. The Cloudflare Tunnel route for `ejazhome.com` is the remaining publishing step.
 
 ## Project records
 
@@ -21,7 +21,8 @@ Install dependencies with `npm install`, then start the local development server
 
 ## Home server deployment
 
-The production container builds the Astro site and serves the generated files with Nginx. On the Ubuntu server, run `docker compose up -d --build`; the site is available on port `8085`. The planned Cloudflare Tunnel service URL is `http://192.168.18.100:8085`.
+The production container builds the Astro site and serves the generated files with Nginx. On the Ubuntu server, run `docker compose up -d --build`; the site is available on port `8085`. The Cloudflare Tunnel service URL for the planned `ejazhome.com` route is `http://192.168.18.100:8085`.
+
 
 
 
