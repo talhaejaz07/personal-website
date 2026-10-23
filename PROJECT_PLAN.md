@@ -13,17 +13,17 @@ This is the living project record for the personal website. It documents the wor
 - **Content direction:** Lead with the owner's interest in PSX stock investing. He regularly shares investment posts on X and videos on YouTube, and also posts personal thoughts on X. Technology and a greener future, especially solar and batteries, are additional interests. The detailed bio remains private planning reference; only owner-approved selections belong on the site.
 - **Initial topic areas:** PSX investing and financial analysis as the main editorial focus; technology and the green-energy future (including solar and batteries) as secondary themes.
 
-### Draft visual system (for review)
+### Approved visual system
 
 The supplied reference suggests an editorial creator-portfolio style: large condensed headlines, tiny spaced labels, generous pale sections, dark imagery, and warm coral accents. Adapt that visual language to an investment-focused personal site while keeping long articles easy to read.
 
-**Typography proposal**
+**Typography**
 - **Display and hero headlines — Barlow Condensed, 600/700:** Use mostly uppercase for short hero statements and section titles. Its narrow, bold shapes echo the reference. Avoid it for paragraphs.
 - **Body and interface — DM Sans, 400/500; use 600 for controls:** Use sentence case for article titles and body copy. Keep paragraph measure around 60–75 characters and line-height around 1.6 for comfortable long-form reading.
 - **Financial data — DM Mono, 400/500, optional:** Use only for tickers, prices, ratios, dates, and compact data labels. Keep prose in DM Sans.
 - **Small labels — DM Sans, 600, uppercase, modest tracking:** Use for categories such as “PSX NOTES” or “LATEST VIDEO”; do not apply wide tracking to paragraphs or tiny text.
 
-**Color proposal**
+**Color palette**
 | Role | Color | Suggested use |
 |---|---|---|
 | Graphite | `#232326` | Main dark sections, header/footer, hero background |
@@ -39,7 +39,7 @@ The supplied reference suggests an editorial creator-portfolio style: large cond
 | Loss | `#A64545` | Negative returns only |
 
 Keep coral as the recognizable identity color, not as a signal for profit/loss. Pair every gain/loss color with a plus/minus sign or label so meaning does not rely on color alone. Check actual text/background contrast when the design is implemented; lighter coral may work as a large decorative accent but not for small text.
-- **Visual direction (proposal, pending owner approval):** A refined creator-portfolio look based on the supplied reference: graphite/charcoal and warm off-white as the foundation, muted coral as the signature accent, with restrained green/red reserved for investment performance. Use Barlow Condensed for display headings, DM Sans for reading/UI, and DM Mono sparingly for financial figures and tickers.
+- **Visual direction (approved 2026-10-23):** A refined creator-portfolio look based on the supplied reference: graphite/charcoal and warm off-white as the foundation, muted coral as the signature accent, with restrained green/red reserved for investment performance. Use Barlow Condensed for display headings, DM Sans for reading/UI, and DM Mono sparingly for financial figures and tickers.
 - **Last updated:** 2026-10-23
 
 ## Working agreements
@@ -117,7 +117,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | In progress | X and YouTube links collected; PSX investing confirmed as the main focus, with technology and solar/batteries as secondary interests. Need approved short public bio and any images or brand references |
 | DISC-03 | Discover and define | Agree on constraints, success criteria, target launch timing, and maintenance needs | User + Assistant | Not started | |
 | PLAN-01 | Plan the experience | Draft the sitemap and navigation | Assistant, with User review | In progress | Draft proposes Home, About, Blog, and Socials; X and YouTube selected; review the structure and remaining content |
-| PLAN-02 | Plan the experience | Agree on visual direction and page-level requirements | User + Assistant | In progress | Typography and palette proposed from the supplied reference; awaiting owner approval or adjustments |
+| PLAN-02 | Plan the experience | Agree on visual direction and page-level requirements | User + Assistant | Done | Owner approved the Barlow Condensed + DM Sans + optional DM Mono system and graphite/ivory/coral palette on 2026-10-23 |
 | PLAN-03 | Plan the experience | Identify accessibility, privacy, SEO, and performance requirements | Assistant, with User review | Not started | |
 | TECH-01 | Choose the implementation approach | Select the site framework | User + Assistant | Done | Astro selected on 2026-10-23 |
 | TECH-03 | Choose the implementation approach | Choose supporting dependencies and blog authoring/content workflow | User + Assistant | Not started | Consider Markdown files in the project or a CMS |
@@ -169,7 +169,7 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 | Date | Decision | Reason | Impact / follow-up |
 |---|---|---|---|
-| 2026-10-23 | Proposed a typography and color system inspired by the supplied creator-portfolio reference; not yet approved. | The owner asked for font and color recommendations, and the site centers on PSX investing with technology/green energy as secondary themes. | Review Barlow Condensed for display, DM Sans for body/UI, optional DM Mono for figures; graphite/ivory/coral palette with green/red reserved for returns. Confirm before implementation. |
+| 2026-10-23 | Proposed a typography and color system inspired by the supplied creator-portfolio reference. | The owner requested detailed recommendations, then approved the complete type and color proposal. | Adopt Barlow Condensed for display, DM Sans for body/UI, optional DM Mono for figures; graphite/ivory/coral palette with green/red reserved for returns. Check contrast during implementation. |
 | 2026-10-23 | Feature X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) as the initial social links. | The owner selected these profiles for now. | Show them on the Home and Socials pages; additional profiles can be added later. |
 | 2026-10-23 | Shape the website around personal identity, social profiles, and blog writing for friends and general visitors. | The owner wants the site to show who they are and share their writing. | Use an interest-led personal brand without job-search positioning; review the proposed Home, About, Blog, and Socials pages. |
 | 2026-10-23 | Publish container images with GitHub Actions and use a systemd timer on the home server to pull updates every 60 seconds. | The server should update from Git pushes without exposing a new inbound service; running a second Watchtower conflicted with CasaOS's existing Watchtower. | The timer updates only `personal-website`; GHCR package is publicly pullable. |
