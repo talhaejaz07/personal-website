@@ -1,4 +1,4 @@
-Warning: truncated output (original token count: 8)
-Total output lines: 4
+node_modules/
+dist/
+.astro/
 
-no…7 tokens truncated…
