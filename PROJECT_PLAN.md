@@ -66,7 +66,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
-| PIPE-01 | Prepare and launch | Build and publish the site image on each push to main, then automatically update the home-server container | Assistant | In progress | GitHub Actions publishes to GHCR; dedicated Watchtower checks every 60 seconds |
+| PIPE-01 | Prepare and launch | Build and publish the site image on each push to main, then automatically update the home-server container | Assistant | Done | GitHub Actions run succeeded and published to GHCR; server pulled the image without registry login, launched the site and scoped Watchtower updater; `http://192.168.18.100:8085/` returned HTTP 200 |
 | HOST-02 | Prepare and launch | Start the Docker service on the home server and confirm LAN access | User + Assistant | Done | Container running on port 8085; workstation received HTTP 200 from `192.168.18.100:8085` |
 | HOST-01 | Prepare and launch | Add a Docker/Nginx production service on port 8085 | Assistant | Done | Multi-stage Astro build and static Nginx service added |
 | BUILD-00 | Build the foundation | Initialize an empty Astro project scaffold | Assistant | Done | Installed Astro and added the root route, config, TypeScript config, npm scripts, and lockfile; no page content added |
@@ -104,6 +104,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-23 | User + Assistant | PIPE-01 | Added GitHub Actions publishing to GHCR on every push to `main`, deployed the image to the home server, and started a dedicated Watchtower updater checking every 60 seconds. The image pulled anonymously and the LAN site returned HTTP 200. |
 | 2026-10-23 | User + Assistant | HOST-02 | Launched `personal-website` on the Ubuntu server; container is up and the workstation received HTTP 200 from `http://192.168.18.100:8085/`. |
 | 2026-10-23 | Assistant | HOST-01 | Added Docker build and Compose configuration to serve Astro's generated static files with Nginx on host port 8085. |
 | 2026-10-23 | Assistant | BUILD-00 | Initialized a blank Astro scaffold with npm scripts and dependencies; added an empty root page and documented local commands. |
@@ -131,6 +132,7 @@ Add questions that need an answer and blockers that prevent progress. Remove or 
 - [ ] Should blog posts be authored as Markdown files in the project, or through a CMS?
 - [ ] Are there preferred tools, a domain, or a hosting provider?
 - [ ] Is there a target date or other constraint we should plan around?
+
 
 
 
