@@ -138,7 +138,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
-| 2026-10-23 | PLAN-02 | Shared the overall visual reference and asked for detailed typography and color recommendations | Drafted a font system and charcoal/ivory/coral palette tailored to an investment-focused site; proposal remains for review | Approve or adjust font pairing and palette before implementation |
+| 2026-10-23 | PLAN-02 | Approved the proposed typography and color scheme | Approved Barlow Condensed + DM Sans + optional DM Mono and the graphite/ivory/coral palette, with green/red reserved for investment performance | Implement the approved visual system in the site foundation |
 | 2026-10-23 | SOCIAL-01 | Chose X and YouTube as the social profiles to show for now | [X](https://x.com/TalhaEjaz07ee), [YouTube](https://www.youtube.com/@TalhaEjaz) | Add other profiles later if wanted |
 | 2026-10-23 | DISC-01 | Clarified that the website is for personal expression, social profiles, and a blog; the audience is friends and general visitors | Agreed on a personal, interest-led site without job-search positioning | Share social profile links and content preferences in DISC-02 |
 | 2026-10-23 | LAUNCH-02 | Added the `ejazhome.com` published application route in Cloudflare Tunnel | Screenshot shows the route to `http://192.168.18.100:8085`; live HTTPS check returned HTTP 200 | Continue site content and design work |
@@ -150,6 +150,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-23 | User | PLAN-02 | Approved the proposed typography and color scheme: Barlow Condensed + DM Sans + optional DM Mono, graphite/ivory/coral palette, and restrained green/red for investment performance. |
 | 2026-10-23 | User + Assistant | PLAN-02 | User supplied the target visual reference and requested typography and color recommendations. Proposed Barlow Condensed + DM Sans + optional DM Mono, with graphite, warm ivory, coral, and restrained gain/loss colors; pending owner approval. |
 | 2026-10-23 | User | SOCIAL-01 | Selected X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) for the first release; other links may be added later. |
 | 2026-10-23 | User + Assistant | DISC-01 | Agreed the website should express who the owner is, showcase social profiles, and share writing with friends and general visitors. It will not use job-search framing. |
@@ -169,7 +170,7 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 | Date | Decision | Reason | Impact / follow-up |
 |---|---|---|---|
-| 2026-10-23 | Proposed a typography and color system inspired by the supplied creator-portfolio reference. | The owner requested detailed recommendations, then approved the complete type and color proposal. | Adopt Barlow Condensed for display, DM Sans for body/UI, optional DM Mono for figures; graphite/ivory/coral palette with green/red reserved for returns. Check contrast during implementation. |
+| 2026-10-23 | Approve the proposed Barlow Condensed + DM Sans + optional DM Mono type system and graphite/ivory/coral palette, with gain/loss colors reserved for investment performance. | The owner approved the visual recommendations for the site. | Use this system as the design foundation; verify text contrast and responsive typography during implementation. |
 | 2026-10-23 | Feature X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) as the initial social links. | The owner selected these profiles for now. | Show them on the Home and Socials pages; additional profiles can be added later. |
 | 2026-10-23 | Shape the website around personal identity, social profiles, and blog writing for friends and general visitors. | The owner wants the site to show who they are and share their writing. | Use an interest-led personal brand without job-search positioning; review the proposed Home, About, Blog, and Socials pages. |
 | 2026-10-23 | Publish container images with GitHub Actions and use a systemd timer on the home server to pull updates every 60 seconds. | The server should update from Git pushes without exposing a new inbound service; running a second Watchtower conflicted with CasaOS's existing Watchtower. | The timer updates only `personal-website`; GHCR package is publicly pullable. |
