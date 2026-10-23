@@ -21,9 +21,11 @@ Install dependencies with `npm install`, then start the local development server
 
 ## Home server deployment
 
-Pushes to `main` trigger GitHub Actions to build the Astro site and publish the Docker image to GitHub Container Registry. The server's dedicated Watchtower container checks for a new image every 60 seconds and updates only the `personal-website` container. Its existing Watchtower service for other apps is unchanged.
+Pushes to `main` trigger GitHub Actions to build the Astro site and publish the Docker image to GitHub Container Registry. The home server pulls the public image without registry credentials. Its dedicated Watchtower container checks for a new image every 60 seconds and updates only the `personal-website` container. Its existing Watchtower service for other apps is unchanged.
 
-The first server setup needs the image available from GitHub Container Registry. Confirm the package visibility is public so the server can pull without registry credentials. Then run these commands on the Ubuntu server:
+To publish a change, push it to `main`. GitHub Actions builds and publishes the image, and the server updates within about a minute after the build completes. The site is available on port `8085`; the Cloudflare Tunnel service URL is `http://192.168.18.100:8085`.
+
+For a first-time server setup or a manual refresh, run:
 
 ```sh
 cd /home/talha/personal-website
@@ -32,7 +34,7 @@ docker compose pull personal-website
 docker compose up -d
 ```
 
-The site remains available on port `8085`; the Cloudflare Tunnel service URL is `http://192.168.18.100:8085`.
+
 
 
 
