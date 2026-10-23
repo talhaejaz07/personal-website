@@ -1,0 +1,32 @@
+name: Publish website container
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Log in to GitHub Container Registry
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.actor }}
+        run: echo "$GH_TOKEN" | docker login ghcr.io --username "$GH_USER" --password-stdin
+
+      - name: Build and publish image
+        env:
+          IMAGE: ghcr.io/talhaejaz07/personal-website
+        run: |
+          docker build --pull --tag "$IMAGE:latest" --tag "$IMAGE:$GITHUB_SHA" .
+          docker push "$IMAGE:$GITHUB_SHA"
+          docker push "$IMAGE:latest"
+
