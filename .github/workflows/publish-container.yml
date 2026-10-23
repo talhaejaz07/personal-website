@@ -30,8 +30,9 @@ jobs:
         env:
           IMAGE: ghcr.io/talhaejaz07/personal-website
         run: |
-          docker build --pull --tag "$IMAGE:latest" --tag "$IMAGE:$GITHUB_SHA" .
+          docker build --pull --build-arg VCS_REF="$GITHUB_SHA" --tag "$IMAGE:latest" --tag "$IMAGE:$GITHUB_SHA" .
           docker push "$IMAGE:$GITHUB_SHA"
           docker push "$IMAGE:latest"
+
 
 

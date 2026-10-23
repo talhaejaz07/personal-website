@@ -66,7 +66,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
-| PIPE-01 | Prepare and launch | Build and publish the site image on each push to main, then automatically update the home-server container | Assistant | In progress | GitHub Actions publishes to GHCR; a systemd timer will check every 60 seconds and update only the site container. Deploy method adjusted after the existing server Watchtower conflicted with a second Watchtower process. |
+| PIPE-01 | Prepare and launch | Build and publish the site image on each push to main, then automatically update the home-server container | Assistant | In progress | GitHub Actions publishes to GHCR; the installed systemd timer checks every 60 seconds and updates only the site container. Verifying a new image revision deploys end to end. |
 | HOST-02 | Prepare and launch | Start the Docker service on the home server and confirm LAN access | User + Assistant | Done | Container running on port 8085; workstation received HTTP 200 from `192.168.18.100:8085` |
 | HOST-01 | Prepare and launch | Add a Docker/Nginx production service on port 8085 | Assistant | Done | Multi-stage Astro build and static Nginx service added |
 | BUILD-00 | Build the foundation | Initialize an empty Astro project scaffold | Assistant | Done | Installed Astro and added the root route, config, TypeScript config, npm scripts, and lockfile; no page content added |
@@ -132,6 +132,7 @@ Add questions that need an answer and blockers that prevent progress. Remove or 
 - [ ] Should blog posts be authored as Markdown files in the project, or through a CMS?
 - [ ] Are there preferred tools, a domain, or a hosting provider?
 - [ ] Is there a target date or other constraint we should plan around?
+
 
 
 

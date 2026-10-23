@@ -10,11 +10,14 @@ RUN npm run build
 
 FROM nginx:alpine
 
-LABEL org.opencontainers.image.source="https://github.com/talhaejaz07/personal-website"
+ARG VCS_REF=unknown
+LABEL org.opencontainers.image.source="https://github.com/talhaejaz07/personal-website" \
+      org.opencontainers.image.revision=$VCS_REF
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist/ /usr/share/nginx/html/
 
 EXPOSE 80
+
 
 
