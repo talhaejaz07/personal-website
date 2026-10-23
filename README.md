@@ -21,7 +21,19 @@ Install dependencies with `npm install`, then start the local development server
 
 ## Home server deployment
 
-The production container builds the Astro site and serves the generated files with Nginx. On the Ubuntu server, run `docker compose up -d --build`; the site is available on port `8085`. The Cloudflare Tunnel service URL for the planned `ejazhome.com` route is `http://192.168.18.100:8085`.
+Pushes to `main` trigger GitHub Actions to build the Astro site and publish the Docker image to GitHub Container Registry. The server's dedicated Watchtower container checks for a new image every 60 seconds and updates only the `personal-website` container. Its existing Watchtower service for other apps is unchanged.
+
+The first server setup needs the image available from GitHub Container Registry. Confirm the package visibility is public so the server can pull without registry credentials. Then run these commands on the Ubuntu server:
+
+```sh
+cd /home/talha/personal-website
+git pull --ff-only
+docker compose pull personal-website
+docker compose up -d
+```
+
+The site remains available on port `8085`; the Cloudflare Tunnel service URL is `http://192.168.18.100:8085`.
+
 
 
 
