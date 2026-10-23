@@ -122,6 +122,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | TECH-01 | Choose the implementation approach | Select the site framework | User + Assistant | Done | Astro selected on 2026-10-23 |
 | TECH-03 | Choose the implementation approach | Choose supporting dependencies and blog authoring/content workflow | User + Assistant | Not started | Consider Markdown files in the project or a CMS |
 | TECH-02 | Choose the implementation approach | Select domain, hosting, and deployment workflow | User + Assistant | Done | `ejazhome.com` uses the existing Cloudflare Tunnel to reach the home server; GitHub Actions and the server systemd timer publish updates |
+| HOME-01 | Create pages and content | Build the homepage using the approved visual system and owner-provided portrait | Assistant | Done | Responsive homepage added with PSX investing as the primary focus, X/YouTube links, secondary technology/green-energy interests, and an optimized transparent portrait |
 | BUILD-01 | Build the foundation | Set up the project structure and shared site shell | Assistant | Not started | |
 | BUILD-02 | Build the foundation | Implement responsive layout, navigation, and shared styles | Assistant | Not started | |
 | BUILD-03 | Create pages and content | Build each agreed page and add owner-approved content and assets | Assistant, with User content/review | Not started | Add one task row per page/features once scope is agreed |
@@ -138,6 +139,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
+| 2026-10-23 | HOME-01 | Supplied a portrait to use in the homepage hero and asked for a homepage based on the approved design reference | Portrait placed in the hero; homepage follows the approved fonts/colors and leads with PSX investing, with social links and supporting interests | Review the homepage and suggest any content or layout changes |
 | 2026-10-23 | PLAN-02 | Approved the proposed typography and color scheme | Approved Barlow Condensed + DM Sans + optional DM Mono and the graphite/ivory/coral palette, with green/red reserved for investment performance | Implement the approved visual system in the site foundation |
 | 2026-10-23 | SOCIAL-01 | Chose X and YouTube as the social profiles to show for now | [X](https://x.com/TalhaEjaz07ee), [YouTube](https://www.youtube.com/@TalhaEjaz) | Add other profiles later if wanted |
 | 2026-10-23 | DISC-01 | Clarified that the website is for personal expression, social profiles, and a blog; the audience is friends and general visitors | Agreed on a personal, interest-led site without job-search positioning | Share social profile links and content preferences in DISC-02 |
@@ -150,6 +152,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-23 | Assistant | HOME-01 | Built a responsive Astro homepage using the approved visual system and owner-provided portrait. Added PSX-focused hero copy, external X/YouTube calls to action, focus cards, channel section, concise introduction, metadata, and footer. Converted the transparent PNG to WebP for the hero; production build completed successfully after a clean dependency install. |
 | 2026-10-23 | User | PLAN-02 | Approved the proposed typography and color scheme: Barlow Condensed + DM Sans + optional DM Mono, graphite/ivory/coral palette, and restrained green/red for investment performance. |
 | 2026-10-23 | User + Assistant | PLAN-02 | User supplied the target visual reference and requested typography and color recommendations. Proposed Barlow Condensed + DM Sans + optional DM Mono, with graphite, warm ivory, coral, and restrained gain/loss colors; pending owner approval. |
 | 2026-10-23 | User | SOCIAL-01 | Selected X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) for the first release; other links may be added later. |
@@ -170,6 +173,7 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 | Date | Decision | Reason | Impact / follow-up |
 |---|---|---|---|
+| 2026-10-23 | Use the owner-provided portrait in a dark, editorial hero and structure the homepage around PSX investing, social channels, and supporting interests. | The owner requested the portrait for the hero and a homepage inspired by the supplied reference; the project plan establishes PSX investing as the leading content focus. | First homepage uses the approved visual system and links to X and YouTube; review the page before expanding into the blog and other pages. |
 | 2026-10-23 | Approve the proposed Barlow Condensed + DM Sans + optional DM Mono type system and graphite/ivory/coral palette, with gain/loss colors reserved for investment performance. | The owner approved the visual recommendations for the site. | Use this system as the design foundation; verify text contrast and responsive typography during implementation. |
 | 2026-10-23 | Feature X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) as the initial social links. | The owner selected these profiles for now. | Show them on the Home and Socials pages; additional profiles can be added later. |
 | 2026-10-23 | Shape the website around personal identity, social profiles, and blog writing for friends and general visitors. | The owner wants the site to show who they are and share their writing. | Use an interest-led personal brand without job-search positioning; review the proposed Home, About, Blog, and Socials pages. |
@@ -183,20 +187,5 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 Add questions that need an answer and blockers that prevent progress. Remove or mark entries resolved when addressed.
 
 - [ ] Which pages and content should the first version include?
-- [ ] What design references, style, or assets should guide it?
 - [ ] Should blog posts be authored as Markdown files in the project, or through a CMS?
 - [ ] Is there a target date or other constraint we should plan around?
-
-
-
-
-
-
-
-
-
-
-
-
-
-

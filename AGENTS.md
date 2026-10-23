@@ -9,6 +9,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
+| 2026-10-23 | HOME-01 | Assistant, with User-provided portrait | Built the first responsive Astro homepage from the approved design and content direction; used the supplied portrait in the hero and added X/YouTube links. Production build succeeded. Done. | This commit; push after completion |
 | 2026-10-23 | PLAN-02 | User + Assistant | Drafted and presented the proposed typography and palette, then the user approved the full system. Marked the design direction approved in the project plan. Done. | `db83f96`, `70cf4d1`, `1eff378`, `a5fc331` |
 | 2026-10-23 | DISC-02 | User + Assistant | User provided detailed personal background as planning reference and clarified it should not all appear on the site. Recorded only broad candidate themes and a privacy note in the project plan; full text/private details were not copied to the public repo. In progress pending selection of public bio and topic priorities. | `ed5f795`, `db3f10a` |
 | 2026-10-23 | SOCIAL-01 | User | Selected X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) for the first release; other social profiles can be added later. Done. | This commit; push after completion |
@@ -25,17 +26,3 @@
 | 2026-10-23 | DOC-AGENTS-01 | User + Assistant | Made project plan reading compulsory and added commit/push-after-each-task instructions. Done. | `9b1f38a` |
 | 2026-10-23 | TECH-01 | User + Assistant | Selected Astro after the owner confirmed the site will include a blog. Done. | `edbac83` |
 | 2026-10-23 | PLAN-INIT | Assistant | Created the project plan, initial scope, task tracker, and logs. Done. | `edbac83` |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
