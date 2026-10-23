@@ -9,6 +9,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
+| 2026-10-23 | DISC-02 | User + Assistant | User provided detailed personal background as planning reference and clarified it should not all appear on the site. Recorded only broad candidate themes and a privacy note in the project plan; full text/private details were not copied to the public repo. In progress pending selection of public bio and topic priorities. | This commit; push after completion |
 | 2026-10-23 | SOCIAL-01 | User | Selected X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) for the first release; other social profiles can be added later. Done. | This commit; push after completion |
 | 2026-10-23 | PLAN-01 | Assistant, with User review | Drafted Home, About, Blog, and Socials for the first release; waiting on social profile links and page/content review. In progress. | This commit; push after completion |
 | 2026-10-23 | DISC-01 | User + Assistant | Agreed the site should introduce who the owner is, showcase social profiles, and share writing with friends and general visitors; no job-search framing. Done. | This commit; push after completion |
