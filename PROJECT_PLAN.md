@@ -66,7 +66,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
-| PIPE-01 | Prepare and launch | Build and publish the site image on each push to main, then automatically update the home-server container | Assistant | In progress | GitHub Actions publishes to GHCR; the installed systemd timer checks every 60 seconds and updates only the site container. Verifying a new image revision deploys end to end. |
+| PIPE-01 | Prepare and launch | Build and publish the site image on each push to main, then automatically update the home-server container | Assistant | Done | GitHub Actions run for `b2aa7f1` succeeded; the enabled systemd timer pulled and ran that exact image revision. Site returned HTTP 200; original CasaOS Watchtower is healthy. |
 | HOST-02 | Prepare and launch | Start the Docker service on the home server and confirm LAN access | User + Assistant | Done | Container running on port 8085; workstation received HTTP 200 from `192.168.18.100:8085` |
 | HOST-01 | Prepare and launch | Add a Docker/Nginx production service on port 8085 | Assistant | Done | Multi-stage Astro build and static Nginx service added |
 | BUILD-00 | Build the foundation | Initialize an empty Astro project scaffold | Assistant | Done | Installed Astro and added the root route, config, TypeScript config, npm scripts, and lockfile; no page content added |
@@ -104,7 +104,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
-| 2026-10-23 | User + Assistant | PIPE-01 | Added GitHub Actions publishing to GHCR on every push to `main`; changed the server refresh mechanism to a systemd timer after discovering that a second Watchtower instance conflicts with the existing CasaOS Watchtower service. Restored the original Watchtower service. |
+| 2026-10-23 | User + Assistant | PIPE-01 | Verified the GitHub Actions build for `b2aa7f1` published to GHCR and the systemd timer deployed that exact revision. The site returned HTTP 200 and the original CasaOS Watchtower is healthy. The timer polls every 60 seconds; the conflicting second Watchtower was removed and the original service restored. |
 | 2026-10-23 | User + Assistant | HOST-02 | Launched `personal-website` on the Ubuntu server; container is up and the workstation received HTTP 200 from `http://192.168.18.100:8085/`. |
 | 2026-10-23 | Assistant | HOST-01 | Added Docker build and Compose configuration to serve Astro's generated static files with Nginx on host port 8085. |
 | 2026-10-23 | Assistant | BUILD-00 | Initialized a blank Astro scaffold with npm scripts and dependencies; added an empty root page and documented local commands. |
@@ -118,6 +118,7 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 | Date | Decision | Reason | Impact / follow-up |
 |---|---|---|---|
+| 2026-10-23 | Publish container images with GitHub Actions and use a systemd timer on the home server to pull updates every 60 seconds. | The server should update from Git pushes without exposing a new inbound service; running a second Watchtower conflicted with CasaOS's existing Watchtower. | The timer updates only `personal-website`; GHCR package is publicly pullable. |
 | 2026-10-23 | Host the static Astro site on the Ubuntu home server and publish through the existing Cloudflare Tunnel. | The owner already runs a Cloudflare Tunnel with routes for other home-server services. | The web container listens on LAN port 8085; add a published application route for `ejazhome.com` as the remaining step. |
 | 2026-10-23 | Use Astro to build the personal website and blog. | The owner plans to add a blog; Astro can generate static pages suitable for the home server. | Choose supporting dependencies and the blog authoring workflow in TECH-03. |
 | 2026-10-23 | Use this file as the shared project plan and task tracker. | Requested by the project owner. | Keep the tracker and logs updated as work proceeds. |
@@ -132,6 +133,7 @@ Add questions that need an answer and blockers that prevent progress. Remove or 
 - [ ] Should blog posts be authored as Markdown files in the project, or through a CMS?
 - [ ] Are there preferred tools, a domain, or a hosting provider?
 - [ ] Is there a target date or other constraint we should plan around?
+
 
 
 
