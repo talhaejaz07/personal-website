@@ -1,4 +1,4 @@
-Warning: truncated output (original token count: 21)
-Total output lines: 4
+import { defineConfig } from 'astro/config';
 
-im…20 tokens truncated…
+export default defineConfig({});
+
