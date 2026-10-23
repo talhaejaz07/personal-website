@@ -9,10 +9,12 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
+| 2026-10-23 | DOC-README-01 | User + Assistant | Added a README for the project status, agreed framework, proposed hosting direction, and project records. Done. | This commit; push after completion |
 | 2026-10-23 | DOC-AGENTS-02 | User + Assistant | Added the requirement to maintain a complete task history in this file. Done. | This commit; push after completion |
 | 2026-10-23 | REPO-01 | User + Assistant | Connected this workspace to `talhaejaz07/personal-website` and pushed the project files. Done. | `9b1f38a`, `edbac83` |
 | 2026-10-23 | DOC-AGENTS-01 | User + Assistant | Made project plan reading compulsory and added commit/push-after-each-task instructions. Done. | `9b1f38a` |
 | 2026-10-23 | TECH-01 | User + Assistant | Selected Astro after the owner confirmed the site will include a blog. Done. | `edbac83` |
 | 2026-10-23 | PLAN-INIT | Assistant | Created the project plan, initial scope, task tracker, and logs. Done. | `edbac83` |
+
 
 
