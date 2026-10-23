@@ -46,7 +46,7 @@ This outline is a proposal for owner review.
 - **Home:** Short introduction, a glimpse of personal interests, links to social profiles, and recent blog posts.
 - **About:** Personal background and interests, written in the owner's voice.
 - **Blog:** Post index and individual articles.
-- **Socials:** A curated list of social profiles, with short descriptions if useful.
+- **Socials:** A curated list of social profiles, starting with [X](https://x.com/TalhaEjaz07ee) and [YouTube](https://www.youtube.com/@TalhaEjaz). More can be added later.
 
 A separate projects or résumé page is outside the current plan. We can add a personal-interest page later if the owner wants one.
 
@@ -83,10 +83,11 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | HOST-01 | Prepare and launch | Add a Docker/Nginx production service on port 8085 | Assistant | Done | Multi-stage Astro build and static Nginx service added |
 | BUILD-00 | Build the foundation | Initialize an empty Astro project scaffold | Assistant | Done | Installed Astro and added the root route, config, TypeScript config, npm scripts, and lockfile; no page content added |
 | DOC-README-01 | Discover and define | Add a repository README describing project status, decisions, and project records | Assistant | Done | Added `README.md` |
+| SOCIAL-01 | Plan the experience | Choose social profiles to feature in the first release | User | Done | X: `@TalhaEjaz07ee`; YouTube: `@TalhaEjaz` |
 | DISC-01 | Discover and define | Confirm the website's purpose, audience, and desired visitor actions | User + Assistant | Done | Personal identity, social profiles, and writing for friends and general visitors; no job-search positioning |
-| DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | In progress | Collect social profile links, short bio, interests, and any images or brand references |
+| DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | In progress | X and YouTube links collected; still need a short bio, personal interests, and any images or brand references |
 | DISC-03 | Discover and define | Agree on constraints, success criteria, target launch timing, and maintenance needs | User + Assistant | Not started | |
-| PLAN-01 | Plan the experience | Draft the sitemap and navigation | Assistant, with User review | In progress | Draft proposes Home, About, Blog, and Socials; confirm after gathering profile links and content |
+| PLAN-01 | Plan the experience | Draft the sitemap and navigation | Assistant, with User review | In progress | Draft proposes Home, About, Blog, and Socials; X and YouTube selected; review the structure and remaining content |
 | PLAN-02 | Plan the experience | Agree on visual direction and page-level requirements | User + Assistant | Not started | |
 | PLAN-03 | Plan the experience | Identify accessibility, privacy, SEO, and performance requirements | Assistant, with User review | Not started | |
 | TECH-01 | Choose the implementation approach | Select the site framework | User + Assistant | Done | Astro selected on 2026-10-23 |
@@ -108,6 +109,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
+| 2026-10-23 | SOCIAL-01 | Chose X and YouTube as the social profiles to show for now | [X](https://x.com/TalhaEjaz07ee), [YouTube](https://www.youtube.com/@TalhaEjaz) | Add other profiles later if wanted |
 | 2026-10-23 | DISC-01 | Clarified that the website is for personal expression, social profiles, and a blog; the audience is friends and general visitors | Agreed on a personal, interest-led site without job-search positioning | Share social profile links and content preferences in DISC-02 |
 | 2026-10-23 | LAUNCH-02 | Added the `ejazhome.com` published application route in Cloudflare Tunnel | Screenshot shows the route to `http://192.168.18.100:8085`; live HTTPS check returned HTTP 200 | Continue site content and design work |
 | 2026-10-23 | TECH-01 | Chose Astro after confirming the site will include a blog | Astro selected as the site framework | Decide the blog authoring workflow in TECH-03 |
@@ -118,6 +120,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-23 | User | SOCIAL-01 | Selected X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) for the first release; other links may be added later. |
 | 2026-10-23 | User + Assistant | DISC-01 | Agreed the website should express who the owner is, showcase social profiles, and share writing with friends and general visitors. It will not use job-search framing. |
 | 2026-10-23 | Assistant | PLAN-01 | Drafted a first-release sitemap with Home, About, Blog, and Socials, pending the owner's social links and review. |
 | 2026-10-23 | User + Assistant | LAUNCH-02 | User configured the Cloudflare Tunnel route `ejazhome.com` to `http://192.168.18.100:8085`; a live HTTPS request returned HTTP 200 with title “Personal Website”. |
@@ -135,6 +138,7 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 | Date | Decision | Reason | Impact / follow-up |
 |---|---|---|---|
+| 2026-10-23 | Feature X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) as the initial social links. | The owner selected these profiles for now. | Show them on the Home and Socials pages; additional profiles can be added later. |
 | 2026-10-23 | Shape the website around personal identity, social profiles, and blog writing for friends and general visitors. | The owner wants the site to show who they are and share their writing. | Use an interest-led personal brand without job-search positioning; review the proposed Home, About, Blog, and Socials pages. |
 | 2026-10-23 | Publish container images with GitHub Actions and use a systemd timer on the home server to pull updates every 60 seconds. | The server should update from Git pushes without exposing a new inbound service; running a second Watchtower conflicted with CasaOS's existing Watchtower. | The timer updates only `personal-website`; GHCR package is publicly pullable. |
 | 2026-10-23 | Host the static Astro site on the Ubuntu home server and publish through the existing Cloudflare Tunnel at `ejazhome.com`. | The owner already runs a Cloudflare Tunnel and configured a published application route for the website. | The route sends requests to `http://192.168.18.100:8085`; public HTTPS returned HTTP 200. |
@@ -145,11 +149,11 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 Add questions that need an answer and blockers that prevent progress. Remove or mark entries resolved when addressed.
 
-- [ ] What is the main purpose of the site, and who should it serve?
 - [ ] Which pages and content should the first version include?
 - [ ] What design references, style, or assets should guide it?
 - [ ] Should blog posts be authored as Markdown files in the project, or through a CMS?
 - [ ] Is there a target date or other constraint we should plan around?
+
 
 
 

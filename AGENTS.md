@@ -9,6 +9,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
+| 2026-10-23 | SOCIAL-01 | User | Selected X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) for the first release; other social profiles can be added later. Done. | This commit; push after completion |
 | 2026-10-23 | PLAN-01 | Assistant, with User review | Drafted Home, About, Blog, and Socials for the first release; waiting on social profile links and page/content review. In progress. | This commit; push after completion |
 | 2026-10-23 | DISC-01 | User + Assistant | Agreed the site should introduce who the owner is, showcase social profiles, and share writing with friends and general visitors; no job-search framing. Done. | This commit; push after completion |
 | 2026-10-23 | LAUNCH-02 | User + Assistant | User configured the Cloudflare Tunnel published application route for `ejazhome.com`; public HTTPS request returned HTTP 200 and “Personal Website”. Done. | This commit; push after completion |
@@ -22,6 +23,7 @@
 | 2026-10-23 | DOC-AGENTS-01 | User + Assistant | Made project plan reading compulsory and added commit/push-after-each-task instructions. Done. | `9b1f38a` |
 | 2026-10-23 | TECH-01 | User + Assistant | Selected Astro after the owner confirmed the site will include a blog. Done. | `edbac83` |
 | 2026-10-23 | PLAN-INIT | Assistant | Created the project plan, initial scope, task tracker, and logs. Done. | `edbac83` |
+
 
 
 
