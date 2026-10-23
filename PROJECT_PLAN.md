@@ -13,9 +13,9 @@ This is the living project record for the personal website. It documents the wor
 - **Content direction:** Lead with the owner's interest in PSX stock investing. He regularly shares investment posts on X and videos on YouTube, and also posts personal thoughts on X. Technology and a greener future, especially solar and batteries, are additional interests. The detailed bio remains private planning reference; only owner-approved selections belong on the site.
 - **Initial topic areas:** PSX investing and financial analysis as the main editorial focus; technology and the green-energy future (including solar and batteries) as secondary themes.
 
-### Approved visual system
+### Current visual system
 
-The supplied reference suggests an editorial creator-portfolio style: large condensed headlines, tiny spaced labels, generous pale sections, dark imagery, and warm coral accents. Adapt that visual language to an investment-focused personal site while keeping long articles easy to read.
+The owner updated the color direction on 2026-10-23 using a reference screenshot, explicitly asking to take only its colors. Keep the existing site structure, typography, and content. Use near-black, off-white, and vivid red as the foundation while keeping long articles easy to read.
 
 **Typography**
 - **Display and hero headlines — Barlow Condensed, 600/700:** Use mostly uppercase for short hero statements and section titles. Its narrow, bold shapes echo the reference. Avoid it for paragraphs.
@@ -26,20 +26,20 @@ The supplied reference suggests an editorial creator-portfolio style: large cond
 **Color palette**
 | Role | Color | Suggested use |
 |---|---|---|
-| Graphite | `#232326` | Main dark sections, header/footer, hero background |
-| Soft charcoal | `#343338` | Cards and image overlays on dark sections |
-| Warm ivory | `#F5F2EF` | Main reading background |
+| Near-black | `#100F0F` | Main dark sections, header/footer, hero background |
+| Dark surface | `#1B1918` | Cards and image overlays on dark sections |
+| Off-white | `#F2F0EF` | Main reading background |
 | White | `#FFFFFF` | Article cards and clean content panels |
-| Muted coral | `#E5A18F` | Brand accent, links, outlines, small highlights |
-| Deep coral | `#A85443` | Coral text/buttons on light backgrounds where stronger contrast is needed |
-| Text on light | `#262427` | Main body text on ivory/white |
-| Muted text | `#716C6B` | Secondary text on light backgrounds |
-| Text on dark | `#F5F2EF` | Main text on graphite |
+| Vivid red | `#D94B3D` | Brand accent, links, outlines, small highlights |
+| Deep red | `#B73A2E` | Accent text/buttons on light backgrounds where stronger contrast is needed |
+| Text on light | `#201E1D` | Main body text on off-white/white |
+| Muted text | `#706B69` | Secondary text on light backgrounds |
+| Text on dark | `#F2F0EF` | Main text on near-black |
 | Gain | `#2F7657` | Positive returns only |
 | Loss | `#A64545` | Negative returns only |
 
-Keep coral as the recognizable identity color, not as a signal for profit/loss. Pair every gain/loss color with a plus/minus sign or label so meaning does not rely on color alone. Check actual text/background contrast when the design is implemented; lighter coral may work as a large decorative accent but not for small text.
-- **Visual direction (approved 2026-10-23):** A refined creator-portfolio look based on the supplied reference: graphite/charcoal and warm off-white as the foundation, muted coral as the signature accent, with restrained green/red reserved for investment performance. Use Barlow Condensed for display headings, DM Sans for reading/UI, and DM Mono sparingly for financial figures and tickers.
+Keep vivid red as the recognizable identity color, not as a signal for profit/loss. Pair every gain/loss color with a plus/minus sign or label so meaning does not rely on color alone. Use deep red for smaller text on light backgrounds and vivid red for accents on dark backgrounds.
+- **Visual direction (updated 2026-10-23):** Keep the existing layout and typography (Barlow Condensed, DM Sans, and DM Mono). The owner selected only the near-black, off-white, and vivid red palette from a reference and explicitly excluded its layout and other design features. Retain green/red only for investment performance data.
 - **Last updated:** 2026-10-23
 
 ## Working agreements
@@ -107,6 +107,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
+| DESIGN-03 | Review and refine | Apply the owner-selected near-black/off-white/red palette and repair the homepage header layout | Assistant | In progress | Updated the homepage, blog index, article, post cards, favicon assets, and palette records. Production build succeeds; live verification is pending. |
 | PIPE-01 | Prepare and launch | Build and publish the site image on each push to main, then automatically update the home-server container | Assistant | Done | GitHub Actions run for `b2aa7f1` succeeded; the enabled systemd timer pulled and ran that exact image revision. Site returned HTTP 200; original CasaOS Watchtower is healthy. |
 | HOST-02 | Prepare and launch | Start the Docker service on the home server and confirm LAN access | User + Assistant | Done | Container running on port 8085; workstation received HTTP 200 from `192.168.18.100:8085` |
 | HOST-01 | Prepare and launch | Add a Docker/Nginx production service on port 8085 | Assistant | Done | Multi-stage Astro build and static Nginx service added |
@@ -118,14 +119,14 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | DISC-02 | Discover and define | Gather required content, pages, links, assets, and any existing brand material | User | In progress | X and YouTube links collected; PSX investing confirmed as the main focus, with technology and solar/batteries as secondary interests. Need approved short public bio and any images or brand references |
 | DISC-03 | Discover and define | Agree on constraints, success criteria, target launch timing, and maintenance needs | User + Assistant | Not started | |
 | PLAN-01 | Plan the experience | Draft the sitemap and navigation | Assistant, with User review | In progress | Draft proposes Home, About, Blog, and Socials; X and YouTube selected; review the structure and remaining content |
-| PLAN-02 | Plan the experience | Agree on visual direction and page-level requirements | User + Assistant | Done | Owner approved the Barlow Condensed + DM Sans + optional DM Mono system and graphite/ivory/coral palette on 2026-10-23 |
+| PLAN-02 | Plan the experience | Agree on visual direction and page-level requirements | User + Assistant | Done | Owner approved the Barlow Condensed + DM Sans + optional DM Mono system and near-black/off-white/red palette on 2026-10-23 |
 | PLAN-03 | Plan the experience | Identify accessibility, privacy, SEO, and performance requirements | Assistant, with User review | Not started | |
 | TECH-01 | Choose the implementation approach | Select the site framework | User + Assistant | Done | Astro selected on 2026-10-23 |
 | TECH-03 | Choose the implementation approach | Choose supporting dependencies and blog authoring/content workflow | User + Assistant | Done | Chose Astro Markdown pages in `src/pages/blog/`; article frontmatter supplies index and homepage card metadata, while Astro renders static HTML |
 | TECH-02 | Choose the implementation approach | Select domain, hosting, and deployment workflow | User + Assistant | Done | `ejazhome.com` uses the existing Cloudflare Tunnel to reach the home server; GitHub Actions and the server systemd timer publish updates |
 | HOME-01 | Create pages and content | Build the homepage using the approved visual system and owner-provided portrait | Assistant | Done | Responsive homepage added with PSX investing as the primary focus, X/YouTube links, secondary technology/green-energy interests, and an optimized transparent portrait. Build succeeded; live HTTPS returned HTTP 200 with the expected title and portrait asset on 2026-10-23 |
 | HERO-02 | Create pages and content | Use the owner's updated portrait image in the homepage hero | User + Assistant | Done | Replaced the previous hero portrait with the newly supplied transparent image, optimized as an 1100×1100 WebP (150,568 bytes). Build succeeded; live homepage returned HTTP 200 and the hero asset returned HTTP 200 at 150,568 bytes on 2026-10-23 |
-| FAVICON-01 | Create pages and content | Recolor and add the owner-provided logo as the site favicon | User + Assistant | Done | Recolored the mark to warm ivory and coral, retained the transparent logo master, created a 64×64 favicon and 180×180 Apple touch icon on graphite, and linked both in the page head. Build succeeded; live homepage and both icons returned HTTP 200 on 2026-10-23 |
+| FAVICON-01 | Create pages and content | Recolor and add the owner-provided logo as the site favicon | User + Assistant | Done | Recolored the mark to off-white and vivid red, retained the transparent logo master, created a 64×64 favicon and 180×180 Apple touch icon on near-black, and linked both in the page head. Build succeeded; live homepage and both icons returned HTTP 200 on 2026-10-23 |
 | BUILD-01 | Build the foundation | Set up the project structure and shared site shell | Assistant | Not started | |
 | BUILD-02 | Build the foundation | Implement responsive layout, navigation, and shared styles | Assistant | Not started | |
 | BUILD-03 | Create pages and content | Build each agreed page and add owner-approved content and assets | Assistant, with User content/review | Not started | Add one task row per page/features once scope is agreed |
@@ -143,11 +144,12 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
+| 2026-10-23 | DESIGN-03 | Selected a near-black, off-white, and vivid red palette from a supplied reference and asked to use only its colors; reported that the homepage header was jumbled and requested updating palette references in Markdown docs. | Palette and responsive homepage header updated; README and project plan now reflect the new palette. | Review the published site after deployment |
 | 2026-10-23 | BLOG-01 / BLOG-02 | Requested a blog page, Blog header link, homepage section with up to three latest posts, and supplied the complete MEBL article plus 16:9 and square title images; clarified that the article text must not be changed | Published the exact supplied copy as a Markdown article. The 16:9 image is the cover and the square image is used for cards; public Home, Blog, and article pages returned HTTP 200 | Done |
 | 2026-10-23 | HERO-02 | Supplied an updated portrait and requested it be used in the hero section | Replaced the previous portrait; live homepage and 150,568-byte hero WebP returned HTTP 200 after deployment | Done |
-| 2026-10-23 | FAVICON-01 | Provided the Talha Ejaz logo and asked to recolor it to the approved scheme, shrink it, and use it as the favicon | Logo recolored to ivory and coral; live favicon and Apple touch icon returned HTTP 200 after deployment | Done |
+| 2026-10-23 | FAVICON-01 | Provided the Talha Ejaz logo and asked to recolor it to the approved scheme, shrink it, and use it as the favicon | Logo recolored to off-white and red; live favicon and Apple touch icon returned HTTP 200 after deployment | Done |
 | 2026-10-23 | HOME-01 | Supplied a portrait to use in the homepage hero and asked for a homepage based on the approved design reference | Portrait placed in the hero; homepage follows the approved fonts/colors and leads with PSX investing, with social links and supporting interests | Review the homepage and suggest any content or layout changes |
-| 2026-10-23 | PLAN-02 | Approved the proposed typography and color scheme | Approved Barlow Condensed + DM Sans + optional DM Mono and the graphite/ivory/coral palette, with green/red reserved for investment performance | Implement the approved visual system in the site foundation |
+| 2026-10-23 | PLAN-02 | Approved the proposed typography and color scheme | Approved Barlow Condensed + DM Sans + optional DM Mono and the near-black/off-white/red palette, with green/red reserved for investment performance | Implement the approved visual system in the site foundation |
 | 2026-10-23 | SOCIAL-01 | Chose X and YouTube as the social profiles to show for now | [X](https://x.com/TalhaEjaz07ee), [YouTube](https://www.youtube.com/@TalhaEjaz) | Add other profiles later if wanted |
 | 2026-10-23 | DISC-01 | Clarified that the website is for personal expression, social profiles, and a blog; the audience is friends and general visitors | Agreed on a personal, interest-led site without job-search positioning | Share social profile links and content preferences in DISC-02 |
 | 2026-10-23 | LAUNCH-02 | Added the `ejazhome.com` published application route in Cloudflare Tunnel | Screenshot shows the route to `http://192.168.18.100:8085`; live HTTPS check returned HTTP 200 | Continue site content and design work |
@@ -159,14 +161,15 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-23 | Assistant | DESIGN-03 | Replaced the old palette with near-black, off-white, and vivid red across the homepage, blog index, article, cards, and favicon assets. Rebuilt the homepage header into a balanced desktop grid and a two-row mobile layout. Updated palette records in README and PROJECT_PLAN. Production build succeeded; deployment verification pending. |
 | 2026-10-23 | Assistant | BLOG-01 / BLOG-02 | Added the Blog header link, date-sorted latest-three section on Home, Markdown blog index, and MEBL stock analysis page. Preserved the article copy as supplied. Used the square image for cards and the 16:9 image for the post cover. `npm run build` succeeded; LAN and public Home/Blog/article pages and the two images returned HTTP 200. |
 | 2026-10-23 | Assistant | DOC-AGENTS-03 | Restored the complete `AGENTS.md` task history from commit `7b62106` after a documentation commit left the file empty; added a repair record and task references. |
 | 2026-10-23 | User + Assistant | BLOG-01 / BLOG-02 | User supplied the MEBL article and two appropriately sized title images, requested a Blog header link, a blog index, and up to three latest post cards on Home, and specified the post text must remain unchanged. Started implementing the Markdown-based blog workflow. |
 | 2026-10-23 | Assistant | HERO-02 | Replaced the hero image with the newly supplied transparent portrait. Converted it to an 1100×1100 WebP (150,568 bytes), visually checked it, and confirmed the live hero asset returned HTTP 200 at the expected size after server revision `b70ba1d`. |
-| 2026-10-23 | Assistant | FAVICON-01 | Recolored the supplied logo to warm ivory and muted coral, retained a transparent master, generated compact favicon and Apple touch assets on graphite, and linked both in the page head. Build succeeded; both live icon URLs returned HTTP 200. |
+| 2026-10-23 | Assistant | FAVICON-01 | Recolored the supplied logo to off-white and vivid red, retained a transparent master, generated compact favicon and Apple touch assets on near-black, and linked both in the page head. The logo accents were recolored again to match the updated vivid red palette as part of DESIGN-03. |
 | 2026-10-23 | Assistant | HOME-01 | Built a responsive Astro homepage using the approved visual system and owner-provided portrait. Added PSX-focused hero copy, external X/YouTube calls to action, focus cards, channel section, concise introduction, metadata, and footer. Converted the transparent PNG to WebP for the hero; production build succeeded and the public page returned HTTP 200 with the expected title and portrait asset. |
-| 2026-10-23 | User | PLAN-02 | Approved the proposed typography and color scheme: Barlow Condensed + DM Sans + optional DM Mono, graphite/ivory/coral palette, and restrained green/red for investment performance. |
-| 2026-10-23 | User + Assistant | PLAN-02 | User supplied the target visual reference and requested typography and color recommendations. Proposed Barlow Condensed + DM Sans + optional DM Mono, with graphite, warm ivory, coral, and restrained gain/loss colors; pending owner approval. |
+| 2026-10-23 | User | PLAN-02 | Approved the proposed typography and color scheme: Barlow Condensed + DM Sans + optional DM Mono, near-black/off-white/red palette, and restrained green/red for investment performance. |
+| 2026-10-23 | User + Assistant | PLAN-02 | User supplied the target visual reference and requested typography and color recommendations. Proposed Barlow Condensed + DM Sans + optional DM Mono, with near-black, off-white, vivid red, and restrained gain/loss colors; pending owner approval. |
 | 2026-10-23 | User | SOCIAL-01 | Selected X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) for the first release; other links may be added later. |
 | 2026-10-23 | User + Assistant | DISC-01 | Agreed the website should express who the owner is, showcase social profiles, and share writing with friends and general visitors. It will not use job-search framing. |
 | 2026-10-23 | Assistant | PLAN-01 | Drafted a first-release sitemap with Home, About, Blog, and Socials, pending the owner's social links and review. |
@@ -185,12 +188,13 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 | Date | Decision | Reason | Impact / follow-up |
 |---|---|---|---|
+| 2026-10-23 | Use near-black (`#100F0F`), off-white (`#F2F0EF`), and vivid red (`#D94B3D`) as the website palette. | The owner selected only these colors from a supplied reference and explicitly excluded its layout and other design features. | Keep the existing site layout and typography; use deep red for small text on light backgrounds and reserve performance colors for financial data. |
 | 2026-10-23 | Author blog posts as Markdown pages under `src/pages/blog/`. | The site uses Astro and the owner asked to publish a first long-form post. | Astro generates static post pages; frontmatter drives the blog index and homepage cards without client-side JavaScript. |
 | 2026-10-23 | Preserve the MEBL article text exactly as supplied by the owner. | The owner explicitly instructed not to change the blog text. | Present the provided title, analysis, tables, YouTube links, and disclaimer without editorial changes. |
 | 2026-10-23 | Use the newly supplied transparent portrait as the homepage hero image. | The owner requested this image for the hero section. | Optimized the portrait as `public/images/talha-ejaz-hero.webp`; verify the live site after deployment. |
-| 2026-10-23 | Use the owner-provided TE logo as the favicon, recolored in warm ivory and muted coral on a graphite tile. | The owner requested a smaller, palette-matched version of the supplied transparent logo for the favicon. | Keep the transparent recolored master in `public/images`; serve `public/favicon.png` and `public/apple-touch-icon.png` from the page head. |
+| 2026-10-23 | Use the owner-provided TE logo as the favicon, recolored in off-white and vivid red on a near-black tile. | The owner requested a smaller, palette-matched version of the supplied transparent logo for the favicon. | Keep the transparent recolored master in `public/images`; serve `public/favicon.png` and `public/apple-touch-icon.png` from the page head. |
 | 2026-10-23 | Use the owner-provided portrait in a dark, editorial hero and structure the homepage around PSX investing, social channels, and supporting interests. | The owner requested the portrait for the hero and a homepage inspired by the supplied reference; the project plan establishes PSX investing as the leading content focus. | First homepage uses the approved visual system and links to X and YouTube; review the page before expanding into the blog and other pages. |
-| 2026-10-23 | Approve the proposed Barlow Condensed + DM Sans + optional DM Mono type system and graphite/ivory/coral palette, with gain/loss colors reserved for investment performance. | The owner approved the visual recommendations for the site. | Use this system as the design foundation; verify text contrast and responsive typography during implementation. |
+| 2026-10-23 | Approve the proposed Barlow Condensed + DM Sans + optional DM Mono type system and near-black/off-white/red palette, with gain/loss colors reserved for investment performance. | The owner approved the visual recommendations for the site. | Use this system as the design foundation; verify text contrast and responsive typography during implementation. |
 | 2026-10-23 | Feature X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) as the initial social links. | The owner selected these profiles for now. | Show them on the Home and Socials pages; additional profiles can be added later. |
 | 2026-10-23 | Shape the website around personal identity, social profiles, and blog writing for friends and general visitors. | The owner wants the site to show who they are and share their writing. | Use an interest-led personal brand without job-search positioning; review the proposed Home, About, Blog, and Socials pages. |
 | 2026-10-23 | Publish container images with GitHub Actions and use a systemd timer on the home server to pull updates every 60 seconds. | The server should update from Git pushes without exposing a new inbound service; running a second Watchtower conflicted with CasaOS's existing Watchtower. | The timer updates only `personal-website`; GHCR package is publicly pullable. |

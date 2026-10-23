@@ -29,7 +29,7 @@ const posts = postModules
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="theme-color" content="#232326" />
+    <meta name="theme-color" content="#100f0f" />
     <meta name="description" content="Personal notes and analysis on PSX investing, technology, and a greener future from Talha Ejaz." />
     <title>Blog — Talha Ejaz</title>
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
@@ -85,37 +85,37 @@ const posts = postModules
 </html>
 
 <style is:global>
-  :root { color-scheme: light; --graphite: #232326; --ivory: #f5f2ef; --coral: #e5a18f; --deep-coral: #a85443; --ink: #262427; --muted: #716c6b; --display: "Barlow Condensed", "Arial Narrow", sans-serif; --body: "DM Sans", Arial, sans-serif; --mono: "DM Mono", monospace; }
+  :root { color-scheme: light; --near-black: #100f0f; --off-white: #f2f0ef; --accent-red: #d94b3d; --deep-coral: #b73a2e; --ink: #201e1d; --muted: #706b69; --display: "Barlow Condensed", "Arial Narrow", sans-serif; --body: "DM Sans", Arial, sans-serif; --mono: "DM Mono", monospace; }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--ivory); color: var(--ink); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+  body { margin: 0; background: var(--off-white); color: var(--ink); font-family: var(--body); -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
   a:focus-visible { outline: 3px solid var(--deep-coral); outline-offset: 4px; }
   .skip-link { position: fixed; z-index: 5; top: 12px; left: 12px; padding: 12px 16px; background: #fff; transform: translateY(-150%); }
   .skip-link:focus { transform: translateY(0); }
-  .site-header { display: flex; min-height: 90px; align-items: center; justify-content: space-between; gap: 24px; padding: 0 max(32px, calc((100vw - 1200px) / 2)); background: var(--graphite); color: var(--ivory); }
+  .site-header { display: flex; min-height: 90px; align-items: center; justify-content: space-between; gap: 24px; padding: 0 max(32px, calc((100vw - 1200px) / 2)); background: var(--near-black); color: var(--off-white); }
   .wordmark { display: flex; flex-direction: column; gap: 3px; width: max-content; }
   .wordmark__name { font-family: var(--display); font-size: 28px; font-weight: 700; letter-spacing: .025em; line-height: .9; }
-  .wordmark__sub { color: var(--coral); font-family: var(--mono); font-size: 8px; letter-spacing: .2em; }
+  .wordmark__sub { color: var(--accent-red); font-family: var(--mono); font-size: 8px; letter-spacing: .2em; }
   nav { display: flex; align-items: center; gap: clamp(18px, 4vw, 46px); }
-  nav a { color: rgb(245 242 239 / 75%); font-size: 10px; font-weight: 600; letter-spacing: .11em; }
-  nav a:hover, nav a[aria-current="page"] { color: var(--coral); }
+  nav a { color: rgb(242 240 239 / 75%); font-size: 10px; font-weight: 600; letter-spacing: .11em; }
+  nav a:hover, nav a[aria-current="page"] { color: var(--accent-red); }
   nav a span { margin-left: 3px; }
   .blog-page { min-height: 68vh; padding-bottom: 100px; }
-  .blog-page__intro { padding: 94px 24px 82px; background: var(--graphite); color: var(--ivory); text-align: center; }
-  .eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 18px; color: var(--coral); font-size: 10px; font-weight: 700; letter-spacing: .17em; }
+  .blog-page__intro { padding: 94px 24px 82px; background: var(--near-black); color: var(--off-white); text-align: center; }
+  .eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 18px; color: var(--accent-red); font-size: 10px; font-weight: 700; letter-spacing: .17em; }
   .eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
-  .blog-page__intro h1 { margin: 0; color: var(--ivory); font-family: var(--display); font-size: clamp(74px, 12vw, 132px); font-weight: 700; line-height: .8; }
-  .blog-page__intro > p:last-child { max-width: 500px; margin: 22px auto 0; color: rgb(245 242 239 / 70%); font-size: 15px; line-height: 1.7; }
+  .blog-page__intro h1 { margin: 0; color: var(--off-white); font-family: var(--display); font-size: clamp(74px, 12vw, 132px); font-weight: 700; line-height: .8; }
+  .blog-page__intro > p:last-child { max-width: 500px; margin: 22px auto 0; color: rgb(242 240 239 / 70%); font-size: 15px; line-height: 1.7; }
   .post-list { width: min(1200px, calc(100% - 48px)); margin: 0 auto; padding-top: 64px; }
-  .post-list__heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-bottom: 1px solid #ddd7d3; padding-bottom: 16px; }
+  .post-list__heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-bottom: 1px solid #dedad8; padding-bottom: 16px; }
   .post-list__heading h2 { margin: 0; color: var(--ink); font-family: var(--display); font-size: 38px; line-height: 1; }
   .post-list__heading span { color: var(--deep-coral); font-family: var(--mono); font-size: 9px; letter-spacing: .12em; }
   .post-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding-top: 30px; }
   .empty-state { color: var(--muted); }
-  .site-footer { display: flex; min-height: 100px; align-items: center; justify-content: space-between; gap: 20px; padding: 22px max(32px, calc((100vw - 1200px) / 2)); background: #1c1c1e; color: rgb(245 242 239 / 65%); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; }
-  .wordmark--footer .wordmark__name { color: var(--ivory); font-size: 22px; }
+  .site-footer { display: flex; min-height: 100px; align-items: center; justify-content: space-between; gap: 20px; padding: 22px max(32px, calc((100vw - 1200px) / 2)); background: #100f0f; color: rgb(242 240 239 / 65%); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; }
+  .wordmark--footer .wordmark__name { color: var(--off-white); font-size: 22px; }
   .wordmark--footer .wordmark__sub { font-size: 7px; }
-  .site-footer > a:last-child { color: var(--coral); }
+  .site-footer > a:last-child { color: var(--accent-red); }
   @media (max-width: 900px) { .post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 600px) {
     .site-header { min-height: 76px; padding-inline: 20px; }
