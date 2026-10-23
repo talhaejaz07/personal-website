@@ -4,7 +4,7 @@ This repository contains the planning and, as work progresses, the source code f
 
 ## Project status
 
-The blank Astro scaffold is deployed publicly. The domain `ejazhome.com` routes through Cloudflare Tunnel to the home server, and a live HTTPS request returned HTTP 200 with the page title “Personal Website”. Page content, design, and the blog authoring workflow are still being decided.
+The first Astro homepage is live at `https://ejazhome.com/`. It introduces Talha's PSX investing focus, links to X and YouTube, and highlights technology and green-energy interests. The site uses the approved Barlow Condensed, DM Sans, and optional DM Mono typography with a graphite, ivory, and coral palette. A live HTTPS check returned HTTP 200 with the expected page title and hero portrait.
 
 ## Hosting
 
