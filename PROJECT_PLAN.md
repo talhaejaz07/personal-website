@@ -6,7 +6,7 @@ This is the living project record for the personal website. It documents the wor
 
 - **Project:** Personal website
 - **Goal:** Plan, build, verify, and publish a personal website that represents its owner and serves the goals we agree on.
-- **Current state:** The blank Astro scaffold is running on the home server and is publicly reachable at `https://ejazhome.com/` through Cloudflare Tunnel. A live request returned HTTP 200 and the page title “Personal Website”.
+- **Current state:** The Astro homepage is running on the home server and is publicly reachable at `https://ejazhome.com/` through Cloudflare Tunnel. A live request returned HTTP 200 with title “Talha Ejaz — Investing with perspective” and the hero portrait asset.
 - **Technology:** Astro with npm, generating a static site; supporting integrations and blog authoring workflow are still to be decided.
 - **Audience:** Friends and general visitors.
 - **Purpose:** Introduce who the owner is, showcase social profiles, and share writing through a blog.
@@ -122,7 +122,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | TECH-01 | Choose the implementation approach | Select the site framework | User + Assistant | Done | Astro selected on 2026-10-23 |
 | TECH-03 | Choose the implementation approach | Choose supporting dependencies and blog authoring/content workflow | User + Assistant | Not started | Consider Markdown files in the project or a CMS |
 | TECH-02 | Choose the implementation approach | Select domain, hosting, and deployment workflow | User + Assistant | Done | `ejazhome.com` uses the existing Cloudflare Tunnel to reach the home server; GitHub Actions and the server systemd timer publish updates |
-| HOME-01 | Create pages and content | Build the homepage using the approved visual system and owner-provided portrait | Assistant | Done | Responsive homepage added with PSX investing as the primary focus, X/YouTube links, secondary technology/green-energy interests, and an optimized transparent portrait |
+| HOME-01 | Create pages and content | Build the homepage using the approved visual system and owner-provided portrait | Assistant | Done | Responsive homepage added with PSX investing as the primary focus, X/YouTube links, secondary technology/green-energy interests, and an optimized transparent portrait. Build succeeded; live HTTPS returned HTTP 200 with the expected title and portrait asset on 2026-10-23 |
 | BUILD-01 | Build the foundation | Set up the project structure and shared site shell | Assistant | Not started | |
 | BUILD-02 | Build the foundation | Implement responsive layout, navigation, and shared styles | Assistant | Not started | |
 | BUILD-03 | Create pages and content | Build each agreed page and add owner-approved content and assets | Assistant, with User content/review | Not started | Add one task row per page/features once scope is agreed |
@@ -152,7 +152,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
-| 2026-10-23 | Assistant | HOME-01 | Built a responsive Astro homepage using the approved visual system and owner-provided portrait. Added PSX-focused hero copy, external X/YouTube calls to action, focus cards, channel section, concise introduction, metadata, and footer. Converted the transparent PNG to WebP for the hero; production build completed successfully after a clean dependency install. |
+| 2026-10-23 | Assistant | HOME-01 | Built a responsive Astro homepage using the approved visual system and owner-provided portrait. Added PSX-focused hero copy, external X/YouTube calls to action, focus cards, channel section, concise introduction, metadata, and footer. Converted the transparent PNG to WebP for the hero; production build succeeded and the public page returned HTTP 200 with the expected title and portrait asset. |
 | 2026-10-23 | User | PLAN-02 | Approved the proposed typography and color scheme: Barlow Condensed + DM Sans + optional DM Mono, graphite/ivory/coral palette, and restrained green/red for investment performance. |
 | 2026-10-23 | User + Assistant | PLAN-02 | User supplied the target visual reference and requested typography and color recommendations. Proposed Barlow Condensed + DM Sans + optional DM Mono, with graphite, warm ivory, coral, and restrained gain/loss colors; pending owner approval. |
 | 2026-10-23 | User | SOCIAL-01 | Selected X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) for the first release; other links may be added later. |
