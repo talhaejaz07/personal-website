@@ -21,18 +21,27 @@ Install dependencies with `npm install`, then start the local development server
 
 ## Home server deployment
 
-Pushes to `main` trigger GitHub Actions to build the Astro site and publish the Docker image to GitHub Container Registry. The home server pulls the public image without registry credentials. Its dedicated Watchtower container checks for a new image every 60 seconds and updates only the `personal-website` container. Its existing Watchtower service for other apps is unchanged.
+Pushes to `main` trigger GitHub Actions to build the Astro site and publish the Docker image to GitHub Container Registry. The home server pulls the public image without registry credentials. A systemd timer checks for new images every 60 seconds and updates only the `personal-website` container. The existing Watchtower service for other apps remains unchanged.
 
 To publish a change, push it to `main`. GitHub Actions builds and publishes the image, and the server updates within about a minute after the build completes. The site is available on port `8085`; the Cloudflare Tunnel service URL is `http://192.168.18.100:8085`.
 
-For a first-time server setup or a manual refresh, run:
+Install the timer once on the Ubuntu server, from the project directory:
 
 ```sh
 cd /home/talha/personal-website
-git pull --ff-only
-docker compose pull personal-website
-docker compose up -d
+sudo install -m 644 deploy/systemd/personal-website-update.service /etc/systemd/system/personal-website-update.service
+sudo install -m 644 deploy/systemd/personal-website-update.timer /etc/systemd/system/personal-website-update.timer
+sudo systemctl daemon-reload
+sudo systemctl enable --now personal-website-update.timer
 ```
+
+For a manual refresh, run:
+
+```sh
+docker compose pull personal-website
+docker compose up -d --no-deps personal-website
+```
+
 
 
 

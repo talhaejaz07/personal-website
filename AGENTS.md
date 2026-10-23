@@ -9,7 +9,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
-| 2026-10-23 | PIPE-01 | User + Assistant | Added the push-triggered image publishing workflow and dedicated 60-second updater; workflow published the GHCR image, server pulled it anonymously, and the site plus updater are running. LAN HTTP check returned 200. Done. | `023d973` (pipeline); completion record in this commit |
+| 2026-10-23 | PIPE-01 | User + Assistant | Added GitHub Actions publishing to GHCR. Replaced the conflicting second Watchtower with a systemd timer for site-only updates; currently installing and verifying the timer. In progress. | This commit; push after completion |
 | 2026-10-23 | HOST-02 | User + Assistant | Started the Docker service on the home server and confirmed LAN access returned HTTP 200. Done. | This commit; push after completion |
 | 2026-10-23 | HOST-01 | User + Assistant | Added Dockerfile, Nginx config, Compose service, and ignore rules for the static Astro site on port 8085. Done. | This commit; push after completion |
 | 2026-10-23 | BUILD-00 | User + Assistant | Initialized a minimal, empty Astro project with npm scripts, config, dependencies, and a blank root route. Done. | This commit; push after completion |
@@ -19,6 +19,7 @@
 | 2026-10-23 | DOC-AGENTS-01 | User + Assistant | Made project plan reading compulsory and added commit/push-after-each-task instructions. Done. | `9b1f38a` |
 | 2026-10-23 | TECH-01 | User + Assistant | Selected Astro after the owner confirmed the site will include a blog. Done. | `edbac83` |
 | 2026-10-23 | PLAN-INIT | Assistant | Created the project plan, initial scope, task tracker, and logs. Done. | `edbac83` |
+
 
 
 

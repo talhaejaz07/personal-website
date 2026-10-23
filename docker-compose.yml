@@ -6,16 +6,5 @@ services:
     ports:
       - "8085:80"
 
-  personal-website-updater:
-    image: containrrr/watchtower:latest
-    container_name: personal-website-updater
-    command:
-      - --interval
-      - "60"
-      - --cleanup
-      - personal-website
-    restart: unless-stopped
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
 
 

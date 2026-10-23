@@ -1,0 +1,11 @@
+[Unit]
+Description=Pull and deploy the personal website container image
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/talha/personal-website
+ExecStart=/usr/bin/docker compose pull --quiet personal-website
+ExecStart=/usr/bin/docker compose up -d --no-deps personal-website
+
