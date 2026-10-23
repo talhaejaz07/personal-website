@@ -9,7 +9,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
-| 2026-10-23 | HOME-01 | Assistant, with User-provided portrait | Built the first responsive Astro homepage from the approved design and content direction; used the supplied portrait in the hero and added X/YouTube links. Production build succeeded. Done. | `baa4787` |
+| 2026-10-23 | HOME-01 | Assistant, with User-provided portrait | Built the first responsive Astro homepage from the approved design and content direction; used the supplied portrait in the hero and added X/YouTube links. Production build succeeded; live site returned HTTP 200 with the expected title and portrait. Done. | `baa4787`, `bd4e7f3`, `cbf5f4e` |
 | 2026-10-23 | PLAN-02 | User + Assistant | Drafted and presented the proposed typography and palette, then the user approved the full system. Marked the design direction approved in the project plan. Done. | `db83f96`, `70cf4d1`, `1eff378`, `a5fc331` |
 | 2026-10-23 | DISC-02 | User + Assistant | User provided detailed personal background as planning reference and clarified it should not all appear on the site. Recorded only broad candidate themes and a privacy note in the project plan; full text/private details were not copied to the public repo. In progress pending selection of public bio and topic priorities. | `ed5f795`, `db3f10a` |
 | 2026-10-23 | SOCIAL-01 | User | Selected X (`@TalhaEjaz07ee`) and YouTube (`@TalhaEjaz`) for the first release; other social profiles can be added later. Done. | This commit; push after completion |
