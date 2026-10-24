@@ -161,6 +161,8 @@ With LPG at Rs 550 per kg, the case for induction cooking becomes considerably s
 
 ## Advantages of Induction Cooktops
 
+![Infographic showing induction cooking benefits, including efficiency, speed, safety, solar use, easier cleaning, and precise temperature control](/images/induction-benefits-20261024-v1.webp)
+
 ### 1. Very High Efficiency
 
 Induction cooktops transfer energy directly into compatible cooking vessels using magnetic fields. This minimizes heat losses compared with gas stoves, where a substantial portion of the heat escapes around the pan.
