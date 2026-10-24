@@ -10,7 +10,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
-| 2026-10-24 | CONTENT-03 | User + Assistant | User clarified that PSX investing should remain a major topic while technology, engineering, green energy, and other interests should also appear as possible writing and video subjects. Broadened public copy and project guidance; blog posts unchanged. Done. | `this commit`; push after completion |
+| 2026-10-24 | CONTENT-03 | User + Assistant | User clarified that PSX investing should remain a major topic while technology, engineering, green energy, and other interests should also appear as possible writing and video subjects. Broadened public copy and project guidance; blog posts unchanged. Done. | `ae548bd`; pushed to `main` |
 | 2026-10-24 | CONTENT-02 | User + Assistant | Reviewed public website copy outside blog posts and revised vague or repetitive copy on the homepage and blog index to be more specific and direct. Blog post text remains unchanged. Done. | `a28595f`; pushed to `main` |
 | 2026-10-24 | CONTENT-01 | User + Assistant | Consolidated the supplied writing examples and instructions into `WRITING_GUIDELINES.md`; added a future-writing reminder here and project references. Done. | `14822f2`; pushed to `main` |
 | 2026-10-24 | BLOG-03 | User + Assistant | User supplied new 2:1 cover and 1:1 card artwork for the MEBL post. Converted and applied versioned WebP assets, updated the cover ratio and image descriptions, kept article text unchanged, and pushed the update. Done. | `99729aa`; pushed to `main` |

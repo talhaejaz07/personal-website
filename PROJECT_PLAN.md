@@ -107,7 +107,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
-| CONTENT-03 | Review and refine | Broaden website copy to reflect investing plus technology, engineering, green energy, and other interests | User + Assistant | Done | Updated homepage, Blog index, writing guide, README, and project content direction. PSX investing remains a major topic; technology, engineering, green energy, and other interests are also represented. Existing blog post text remains unchanged. |
+| CONTENT-03 | Review and refine | Broaden website copy to reflect investing plus technology, engineering, green energy, and other interests | User + Assistant | Done | Updated homepage, Blog index, writing guide, README, and project content direction. PSX investing remains a major topic; technology, engineering, green energy, and other interests are also represented. Existing blog post text remains unchanged. Pushed commit `ae548bd` to `main`. |
 | CONTENT-02 | Review and refine | Review and revise public website copy outside blog posts against the writing guidelines | User + Assistant | Done | Revised vague or repetitive copy on the homepage and blog index, including page descriptions, topic summaries, and social-channel copy. Reviewed shared article navigation labels and kept them; all blog post Markdown remains unchanged. Pushed commit `a28595f` to `main`. |
 | CONTENT-01 | Create pages and content | Consolidate writing guidance and add a reminder for future website and blog copy | User + Assistant | Done | Consolidated the three supplied files into `WRITING_GUIDELINES.md`, added the required read-before-writing reminder to `AGENTS.md`, linked the guide from the README, and pushed commit `14822f2` to `main`. |
 | BLOG-03 | Maintain | Replace the MEBL article cover and card artwork | User + Assistant | Done | Converted the supplied 1254×1254 card image and 1774×887 cover to versioned WebP assets. Updated the MEBL post, shared card references, cover dimensions/ratio, alt text, and Open Graph image; article copy is unchanged. Pushed commit `99729aa` to `main`, triggering the existing publishing workflow. |
@@ -175,7 +175,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
-| 2026-10-24 | User + Assistant | CONTENT-03 | Completed the content-direction update across the homepage, Blog index, writing guidelines, README, and project plan. Existing blog post text remains unchanged. |
+| 2026-10-24 | User + Assistant | CONTENT-03 | Completed the content-direction update across the homepage, Blog index, writing guidelines, README, and project plan. Existing blog post text remains unchanged. Pushed commit `ae548bd` to `main`. |
 | 2026-10-24 | User + Assistant | CONTENT-03 | Started broadening the site copy and project records after the owner clarified that writing/video topics should include interests beyond investing. |
 | 2026-10-24 | User + Assistant | CONTENT-02 | Completed the public-copy review and tightened the homepage and blog index text. Kept all blog post Markdown unchanged. Pushed commit `a28595f` to `main`. |
 | 2026-10-24 | User + Assistant | CONTENT-02 | Started reviewing public-facing homepage and blog index text against `WRITING_GUIDELINES.md`; keep article copy unchanged. |
