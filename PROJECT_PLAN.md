@@ -107,6 +107,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
+| CONTENT-02 | Review and refine | Review and revise public website copy outside blog posts against the writing guidelines | User + Assistant | Done | Revised vague or repetitive copy on the homepage and blog index, including page descriptions, topic summaries, and social-channel copy. Reviewed shared article navigation labels and kept them; all blog post Markdown remains unchanged. |
 | CONTENT-01 | Create pages and content | Consolidate writing guidance and add a reminder for future website and blog copy | User + Assistant | Done | Consolidated the three supplied files into `WRITING_GUIDELINES.md`, added the required read-before-writing reminder to `AGENTS.md`, linked the guide from the README, and pushed commit `14822f2` to `main`. |
 | BLOG-03 | Maintain | Replace the MEBL article cover and card artwork | User + Assistant | Done | Converted the supplied 1254×1254 card image and 1774×887 cover to versioned WebP assets. Updated the MEBL post, shared card references, cover dimensions/ratio, alt text, and Open Graph image; article copy is unchanged. Pushed commit `99729aa` to `main`, triggering the existing publishing workflow. |
 | DESIGN-06 | Review and refine | Make the homepage header transparent | Assistant | Done | Added a transparent background override to Home only. Nav text colors are unchanged; blog and article headers retain their near-black background. Build and GitHub Actions passed; the live homepage computes to transparent while the blog header remains near-black. |
@@ -149,6 +150,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
+| 2026-10-24 | CONTENT-02 | Asked to review website copy outside the blog posts and update any text that clashes with the writing guidelines. | Revised vague or repetitive homepage and blog index copy; blog post text remains unchanged. | Done |
 | 2026-10-24 | CONTENT-01 | Supplied good and weak writing examples plus general writing instructions, and asked for one cleaned-up guide with a reminder for future site writing. | Consolidated their transferable guidance for the site's personal voice, audience, and investing topics in `WRITING_GUIDELINES.md`. | Done |
 | 2026-10-24 | BLOG-03 | Supplied new 2:1 and 1:1 images for the MEBL article and its cards. | Converted and applied as the MEBL article cover and shared card image; pushed to `main` in commit `99729aa`. | Done |
 | 2026-10-23 | DESIGN-06 | Asked to remove `background: var(--near-black)` from `.site-header`, clarified that nav link colors should remain unchanged, then limited the change to the homepage. | Homepage header background computes to transparent; nav color is unchanged, and the blog header remains near-black. | Done |
@@ -171,6 +173,8 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-24 | User + Assistant | CONTENT-02 | Completed the public-copy review and tightened the homepage and blog index text. Kept all blog post Markdown unchanged. |
+| 2026-10-24 | User + Assistant | CONTENT-02 | Started reviewing public-facing homepage and blog index text against `WRITING_GUIDELINES.md`; keep article copy unchanged. |
 | 2026-10-24 | User + Assistant | CONTENT-01 | Completed `WRITING_GUIDELINES.md` for public-facing site and blog copy, added the read-before-writing instruction in `AGENTS.md`, and linked the guide from `README.md`. Pushed commit `14822f2` to `main`. |
 | 2026-10-24 | User + Assistant | CONTENT-01 | Started consolidating the three supplied writing reference files into one project guide and adding a reminder to read it before future website copy or blog writing. |
 | 2026-10-24 | User + Assistant | BLOG-03 | Completed the MEBL artwork update with versioned 1774×887 cover and 1254×1254 card WebP assets. Updated the article cover ratio, alt descriptions, and Open Graph image while leaving article copy unchanged. Pushed commit `99729aa` to `main`, triggering the existing publishing workflow. |
