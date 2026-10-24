@@ -4,10 +4,10 @@ title: "Meezan Bank (MEBL) Stock Analysis: Fair Value, Entry Price & 5-Year Retu
 description: "Is Meezan Bank worth buying at Rs 545, or should long-term investors wait for a better entry price?"
 pubDate: "2026-10-23"
 category: "PSX ANALYSIS"
-cardImage: "/images/mebl-analysis-square.webp"
-cardImageAlt: "MEBL analysis thumbnail featuring Meezan Bank, Pakistan's flag, and a valuation scene"
-coverImage: "/images/mebl-analysis-cover.webp"
-coverImageAlt: "Meezan Bank stock analysis cover image"
+cardImage: "/images/mebl-analysis-square-20261024.webp"
+cardImageAlt: "Meezan Bank (MEBL) valuation analysis with bank branding, an investment chart, and financial books"
+coverImage: "/images/mebl-analysis-cover-20261024.webp"
+coverImageAlt: "Wide MEBL stock analysis cover showing Meezan Bank, an investor, and financial growth charts"
 youtubeUrl: "https://youtu.be/jqfnJBWn3G0?si=2XUaIrVKgdPrlqwn"
 ---
 

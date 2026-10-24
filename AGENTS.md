@@ -9,6 +9,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
+| 2026-10-24 | BLOG-03 | User + Assistant | User supplied new 2:1 cover and 1:1 card artwork for the MEBL post; image replacement and publishing are in progress. | this commit |
 | 2026-10-23 | DESIGN-06 | User + Assistant | User asked for a transparent header, specified that nav colors must remain unchanged, and limited the change to the homepage. Added a transparent homepage header override; blog/article headers retain their original fill. Build, GitHub Actions, and live computed styles passed. Done. | `8b63be9`; this commit |
 | 2026-10-23 | DESIGN-05 | Assistant | User reported crowded homepage footer spacing and text against the screen edges. Reset inherited global flex styles so the homepage footer stacks its two rows inside the centered 1,200px column. Build and live verification succeeded; GitHub Actions passed. Done. | `5bbdff1`; this commit |
 | 2026-10-23 | DESIGN-04 | User + Assistant | User shared a screenshot marking the overlapping homepage header and dark button text. Reset inherited blog-header padding/alignment on the homepage and changed the primary button to deep red with off-white text. Build and live stylesheet check succeeded; GitHub Actions run 46 succeeded. Done. | `966ac75`; this commit |

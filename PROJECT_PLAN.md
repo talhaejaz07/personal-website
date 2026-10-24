@@ -107,6 +107,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
+| BLOG-03 | Maintain | Replace the MEBL article cover and card artwork | User + Assistant | In progress | User supplied 2:1 article artwork and 1:1 card artwork. Replace the article cover and square card asset, update image descriptions, and keep article copy unchanged. |
 | DESIGN-06 | Review and refine | Make the homepage header transparent | Assistant | Done | Added a transparent background override to Home only. Nav text colors are unchanged; blog and article headers retain their near-black background. Build and GitHub Actions passed; the live homepage computes to transparent while the blog header remains near-black. |
 | DESIGN-05 | Review and refine | Clean up homepage footer spacing and correct the content layout | Assistant | Done | Reset inherited footer flex styles on Home so the social section and copyright row stack in the centered 1,200px content area. `npm run build` succeeded; GitHub Actions passed; public page serves the new CSS and rendered footer at 1,200px wide without horizontal overflow. |
 | DESIGN-04 | Review and refine | Fix homepage header spacing and improve primary button text contrast | Assistant | Done | Reset inherited header padding/alignment on Home and use a deep-red primary button with off-white text. `npm run build` succeeded; GitHub Actions run 46 succeeded; public homepage returned HTTP 200 and serves the corrected stylesheet. |
@@ -147,6 +148,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
+| 2026-10-24 | BLOG-03 | Supplied new 2:1 and 1:1 images for the MEBL article and its cards. | Replacement assets provided; site references and publishing are in progress. | Done after the update is pushed |
 | 2026-10-23 | DESIGN-06 | Asked to remove `background: var(--near-black)` from `.site-header`, clarified that nav link colors should remain unchanged, then limited the change to the homepage. | Homepage header background computes to transparent; nav color is unchanged, and the blog header remains near-black. | Done |
 | 2026-10-23 | DESIGN-05 | Shared a screenshot circling the footer and asked to clean up spacing and fix text crowding against the edges. | Footer rows now stack in the centered 1,200px container; verified on the live site with no horizontal overflow. | Done |
 | 2026-10-23 | DESIGN-04 | Shared a screenshot circling the overlapping homepage header items and the dark text on the red hero button; asked to correct the header and lighten the button text. | Fixed the homepage grid overrides and changed the button to deep red with off-white text; public homepage and deployed CSS confirmed over HTTPS. | Done |
@@ -167,6 +169,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-24 | User + Assistant | BLOG-03 | Started replacing the MEBL post's cover and shared card artwork with the owner's newly supplied 2:1 and 1:1 images; preserve the article copy. |
 | 2026-10-23 | Assistant | DESIGN-06 | Added a transparent background override to the homepage header only. Preserved the original nav text color and blog/article header backgrounds. `npm run build` succeeded; GitHub Actions passed; live homepage and Blog computed styles confirmed the homepage is transparent and Blog remains near-black. |
 | 2026-10-23 | Assistant | DESIGN-05 | Inspected the live footer and traced its two-column jumble to global `.site-footer` flex rules leaking into the homepage footer. Reset the home footer to a block layout so its social and copyright rows stack inside the centered 1,200px content container. `npm run build` succeeded, GitHub Actions passed, and the live footer is deployed with no horizontal overflow. |
 | 2026-10-23 | Assistant | DESIGN-04 | Measured the live header and traced the overlap to global blog CSS adding large horizontal padding and `space-between` to the homepage grid. Reset those inherited settings on Home and changed the primary button to deep red with off-white text. `npm run build` succeeded, GitHub Actions run 46 succeeded, and the public homepage returned HTTP 200 with the corrected stylesheet. |
