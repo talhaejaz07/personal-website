@@ -31,7 +31,7 @@ LPG’s lower heating value is about 44–46 MJ per kg, or roughly 12.2–12.8 k
 - Useful heat from 1 kg: 12.8 × 0.33 = **4.22 kWh**
 - Fuel cost per useful kWh: Rs 279.34 ÷ 4.22 = **about Rs 66**
 
-This excludes cylinder delivery, any amount charged above OGRA’s notified price, and the time or effort involved in arranging a refill.
+This excludes any delivery or handling charges and the time or effort involved in arranging a refill. For a personal comparison, use the amount on your actual refill receipt.
 
 ## Piped gas: the tariff slab changes the answer
 
