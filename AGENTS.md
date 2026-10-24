@@ -10,6 +10,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
+| 2026-10-24 | BLOG-06 | User + Assistant | Replace the induction post's banner and card artwork with the supplied images; match the first post's title → banner → text order while preserving the article text. In progress. | `this commit` |
 | 2026-10-24 | BLOG-05 | User + Assistant | Replaced the induction-cooking article with the supplied Markdown verbatim. Confirmed the body is byte-for-byte identical (12,797 bytes); build, GitHub Actions, live article, Blog listing, and images succeeded. Done. | `d76471e`; pushed to `main` |
 | 2026-10-24 | BLOG-04 | User + Assistant | Rewrote and published the induction-cooking article with current Pakistan energy prices, checked calculations, new cover/card art, and a final LPG wording correction. Done. | `370d160`, `1e8bc46`; pushed to `main` |
 | 2026-10-24 | COMMENTS-01 | User + Assistant | User decided the current readership is too small to justify blog comments. Deferred implementation until readership grows; Remark42 with Google sign-in remains a possible future option. | `this commit` |

@@ -4,10 +4,10 @@ title: "A case for Induction Cooktop"
 description: "A case for induction cooking in Pakistan, comparing LPG, piped gas, and electricity at the assumptions in the article."
 pubDate: "2026-10-24"
 category: "ENERGY & TECHNOLOGY"
-cardImage: "/images/induction-cooking-square-20261024.webp"
-cardImageAlt: "A stainless-steel pot on a black induction cooktop in a home kitchen"
-coverImage: "/images/induction-cooking-cover-20261024.webp"
-coverImageAlt: "A stainless-steel pot on a black induction cooktop in a home kitchen, with a warm red reflection"
+cardImage: "/images/induction-cooking-square-20261024-v2.webp"
+cardImageAlt: "An LPG cylinder, rising fuel costs, a gas stove, and an induction cooktop with solar panels"
+coverImage: "/images/induction-cooking-cover-20261024-v2.webp"
+coverImageAlt: "LPG cylinder and fuel costs compared with gas cooking and a solar-powered induction cooktop"
 bodyIncludesTitle: true
 ---
 
