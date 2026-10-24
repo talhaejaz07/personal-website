@@ -9,7 +9,7 @@ The supplied good and weak writing examples informed this guide. They are refere
 - Write for friends and general visitors. Keep the voice personal, clear, and approachable.
 - Use first person when it makes personal opinions or experience clear. Do not make the whole site sound like an academic paper or corporate brochure.
 - Match the formality to the page and subject. Keep site labels and calls to action concise; give blog analysis enough context and explanation.
-- Follow the site's content direction: PSX investing and financial analysis are the main themes; technology and a greener future, especially solar and batteries, are secondary themes.
+- Follow the site's broad content direction: PSX investing is a major theme, alongside technology, engineering, and green energy, especially solar and batteries. Keep investing prominent without making it seem like the only subject; represent the owner's other interests as real topics for future writing and possible videos, and leave room for other subjects he wants to explore.
 - Do not add job-search framing or private biographical details that the owner has not approved for publication.
 
 ## Clarity and structure

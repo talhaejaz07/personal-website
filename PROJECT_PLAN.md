@@ -10,8 +10,8 @@ This is the living project record for the personal website. It documents the wor
 - **Technology:** Astro with npm, generating a static site; blog posts are authored as Markdown pages in `src/pages/blog/`.
 - **Audience:** Friends and general visitors.
 - **Purpose:** Introduce who the owner is, showcase social profiles, and share writing through a blog.
-- **Content direction:** Lead with the owner's interest in PSX stock investing. He regularly shares investment posts on X and videos on YouTube, and also posts personal thoughts on X. Technology and a greener future, especially solar and batteries, are additional interests. The detailed bio remains private planning reference; only owner-approved selections belong on the site.
-- **Initial topic areas:** PSX investing and financial analysis as the main editorial focus; technology and the green-energy future (including solar and batteries) as secondary themes.
+- **Content direction:** PSX investing is a major part of the owner's interests and existing content. He also wants to write about, and may make videos on, technology, engineering, green energy (including solar and batteries), and other subjects that interest him. The site should present investing as a major topic without making it seem like the only topic. The detailed bio remains private planning reference; only owner-approved selections belong on the site.
+- **Initial topic areas:** PSX investing and financial analysis; technology, engineering, and green energy (including solar and batteries); and other topics the owner chooses to explore.
 
 ### Current visual system
 
@@ -72,7 +72,7 @@ Create a personal website with a blog using Astro, check it on common screen siz
 
 This outline is a proposal for owner review.
 
-- **Home:** Short introduction centered on PSX investing, links to X and YouTube, and recent writing.
+- **Home:** Introduce PSX investing as a major interest alongside technology, engineering, and green energy; link to X and YouTube and feature recent writing.
 - **About:** Personal background and interests, written in the owner's voice.
 - **Blog:** Post index and individual articles.
 - **Socials:** A curated list of social profiles, starting with [X](https://x.com/TalhaEjaz07ee) and [YouTube](https://www.youtube.com/@TalhaEjaz). More can be added later.
@@ -107,6 +107,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
+| CONTENT-03 | Review and refine | Broaden website copy to reflect investing plus technology, engineering, green energy, and other interests | User + Assistant | Done | Updated homepage, Blog index, writing guide, README, and project content direction. PSX investing remains a major topic; technology, engineering, green energy, and other interests are also represented. Existing blog post text remains unchanged. |
 | CONTENT-02 | Review and refine | Review and revise public website copy outside blog posts against the writing guidelines | User + Assistant | Done | Revised vague or repetitive copy on the homepage and blog index, including page descriptions, topic summaries, and social-channel copy. Reviewed shared article navigation labels and kept them; all blog post Markdown remains unchanged. Pushed commit `a28595f` to `main`. |
 | CONTENT-01 | Create pages and content | Consolidate writing guidance and add a reminder for future website and blog copy | User + Assistant | Done | Consolidated the three supplied files into `WRITING_GUIDELINES.md`, added the required read-before-writing reminder to `AGENTS.md`, linked the guide from the README, and pushed commit `14822f2` to `main`. |
 | BLOG-03 | Maintain | Replace the MEBL article cover and card artwork | User + Assistant | Done | Converted the supplied 1254×1254 card image and 1774×887 cover to versioned WebP assets. Updated the MEBL post, shared card references, cover dimensions/ratio, alt text, and Open Graph image; article copy is unchanged. Pushed commit `99729aa` to `main`, triggering the existing publishing workflow. |
@@ -150,6 +151,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
+| 2026-10-24 | CONTENT-03 | Clarified that investing should be a major part of the website, while writing and possibly making videos about technology, engineering, green energy, and other interests should also be represented. | Updated homepage and Blog index copy, writing guidelines, README, and project content direction; preserved current blog post text. | Done |
 | 2026-10-24 | CONTENT-02 | Asked to review website copy outside the blog posts and update any text that clashes with the writing guidelines. | Revised vague or repetitive homepage and blog index copy; blog post text remains unchanged. | Done |
 | 2026-10-24 | CONTENT-01 | Supplied good and weak writing examples plus general writing instructions, and asked for one cleaned-up guide with a reminder for future site writing. | Consolidated their transferable guidance for the site's personal voice, audience, and investing topics in `WRITING_GUIDELINES.md`. | Done |
 | 2026-10-24 | BLOG-03 | Supplied new 2:1 and 1:1 images for the MEBL article and its cards. | Converted and applied as the MEBL article cover and shared card image; pushed to `main` in commit `99729aa`. | Done |
@@ -173,6 +175,8 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-24 | User + Assistant | CONTENT-03 | Completed the content-direction update across the homepage, Blog index, writing guidelines, README, and project plan. Existing blog post text remains unchanged. |
+| 2026-10-24 | User + Assistant | CONTENT-03 | Started broadening the site copy and project records after the owner clarified that writing/video topics should include interests beyond investing. |
 | 2026-10-24 | User + Assistant | CONTENT-02 | Completed the public-copy review and tightened the homepage and blog index text. Kept all blog post Markdown unchanged. Pushed commit `a28595f` to `main`. |
 | 2026-10-24 | User + Assistant | CONTENT-02 | Started reviewing public-facing homepage and blog index text against `WRITING_GUIDELINES.md`; keep article copy unchanged. |
 | 2026-10-24 | User + Assistant | CONTENT-01 | Completed `WRITING_GUIDELINES.md` for public-facing site and blog copy, added the read-before-writing instruction in `AGENTS.md`, and linked the guide from `README.md`. Pushed commit `14822f2` to `main`. |
@@ -209,6 +213,7 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 | Date | Decision | Reason | Impact / follow-up |
 |---|---|---|---|
+| 2026-10-24 | Feature PSX investing prominently while representing technology, engineering, green energy, and other interests as content topics too. | The owner clarified that he wants to write about, and may make videos on, interests beyond investing. | Ensure homepage and Blog copy reflect this range without implying investing is the only subject. |
 | 2026-10-24 | Use `WRITING_GUIDELINES.md` as the shared reference for future public-facing website and blog writing. | The owner supplied three writing reference files and asked for one cleaned-up guide with a reminder for future work. | Read the guide before writing or editing site copy; follow task-specific instructions and exact-copy requirements first. |
 | 2026-10-23 | Use near-black (`#100F0F`), off-white (`#F2F0EF`), and vivid red (`#D94B3D`) as the website palette. | The owner selected only these colors from a supplied reference and explicitly excluded its layout and other design features. | Keep the existing site layout and typography; use deep red for small text on light backgrounds and reserve performance colors for financial data. |
 | 2026-10-23 | Author blog posts as Markdown pages under `src/pages/blog/`. | The site uses Astro and the owner asked to publish a first long-form post. | Astro generates static post pages; frontmatter drives the blog index and homepage cards without client-side JavaScript. |
