@@ -108,6 +108,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
 | COMMENTS-01 | Maintain | Add comments to individual blog posts | User + Assistant | Deferred | The owner decided the current readership is too small to justify a comment section and its moderation. Revisit if readership grows. Remark42 with Google sign-in was discussed as a possible future self-hosted option; no implementation now. |
+| BLOG-05 | Maintain | Replace the induction-cooking article with the owner's supplied Markdown verbatim | User + Assistant | In progress | Preserve all supplied article text exactly; update only surrounding frontmatter and presentation needed by the existing blog layout. |
 | CONTENT-03 | Review and refine | Broaden website copy to reflect investing plus technology, engineering, green energy, and other interests | User + Assistant | Done | Updated homepage, Blog index, writing guide, README, and project content direction. PSX investing remains a major topic; technology, engineering, green energy, and other interests are also represented. Existing blog post text remains unchanged. Pushed commit `ae548bd` to `main`. |
 | CONTENT-02 | Review and refine | Review and revise public website copy outside blog posts against the writing guidelines | User + Assistant | Done | Revised vague or repetitive copy on the homepage and blog index, including page descriptions, topic summaries, and social-channel copy. Reviewed shared article navigation labels and kept them; all blog post Markdown remains unchanged. Pushed commit `a28595f` to `main`. |
 | CONTENT-01 | Create pages and content | Consolidate writing guidance and add a reminder for future website and blog copy | User + Assistant | Done | Consolidated the three supplied files into `WRITING_GUIDELINES.md`, added the required read-before-writing reminder to `AGENTS.md`, linked the guide from the README, and pushed commit `14822f2` to `main`. |
@@ -153,6 +154,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
+| 2026-10-24 | BLOG-05 | Supplied a Markdown file for the induction-cooking blog post and explicitly asked for its text to be used unchanged. | Replacing the published article body with the supplied text verbatim. | Publish exact replacement |
 | 2026-10-24 | BLOG-04 | Supplied an earlier article on induction cooktops and asked to update facts, improve the writing, and finalise it for publication today. | Rewrote and published the article with linked current sources, corrected cost comparisons, and new cover/card artwork. | Done |
 | 2026-10-24 | COMMENTS-01 | Decided the current readership is too small to justify a comment section. | Deferred comment implementation; discussed Remark42 with Google sign-in as a possible future self-hosted option. | Revisit if readership grows |
 | 2026-10-24 | CONTENT-03 | Clarified that investing should be a major part of the website, while writing and possibly making videos about technology, engineering, green energy, and other interests should also be represented. | Updated homepage and Blog index copy, writing guidelines, README, and project content direction; preserved current blog post text. | Done |
@@ -179,6 +181,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-24 | User + Assistant | BLOG-05 | Started replacing the induction-cooking article with the owner's attached Markdown exactly as supplied; only page metadata and title presentation will be adjusted outside the article text. |
 | 2026-10-24 | User + Assistant | BLOG-04 | Rewrote and published the induction-cooking article, updated its price assumptions and sources, added wide and square artwork, and verified the live post, Blog listing, and images. Local build and GitHub Actions succeeded; public routes returned HTTP 200. Pushed `370d160` and final copy correction `1e8bc46` to `main`. |
 | 2026-10-24 | User + Assistant | COMMENTS-01 | Deferred a comment system because the current readership does not justify the added infrastructure and moderation; recorded Remark42 as a possible future option. |
 | 2026-10-24 | User + Assistant | CONTENT-03 | Completed the content-direction update across the homepage, Blog index, writing guidelines, README, and project plan. Existing blog post text remains unchanged. Pushed commit `ae548bd` to `main`. |

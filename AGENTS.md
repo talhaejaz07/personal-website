@@ -10,6 +10,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
+| 2026-10-24 | BLOG-05 | User + Assistant | User supplied an exact Markdown article and asked to replace the induction-cooking post without editing any of its text. In progress. | `this commit` |
 | 2026-10-24 | BLOG-04 | User + Assistant | Rewrote and published the induction-cooking article with current Pakistan energy prices, checked calculations, new cover/card art, and a final LPG wording correction. Done. | `370d160`, `1e8bc46`; pushed to `main` |
 | 2026-10-24 | COMMENTS-01 | User + Assistant | User decided the current readership is too small to justify blog comments. Deferred implementation until readership grows; Remark42 with Google sign-in remains a possible future option. | `this commit` |
 | 2026-10-24 | CONTENT-03 | User + Assistant | User clarified that PSX investing should remain a major topic while technology, engineering, green energy, and other interests should also appear as possible writing and video subjects. Broadened public copy and project guidance; blog posts unchanged. Done. | `ae548bd`; pushed to `main` |
