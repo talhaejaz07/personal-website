@@ -10,7 +10,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
-| 2026-10-24 | BLOG-07 | User + Assistant | Add the supplied solar-powered induction image between the “Solar Advantage” heading and its existing text. In progress. | `this commit` |
+| 2026-10-24 | BLOG-07 | User + Assistant | Added the supplied solar-powered induction image directly below “Solar Advantage” and before its existing text. The article wording is unchanged. Build, GitHub Actions, and LAN/public article and image checks succeeded. Done. | `511cf42`; pushed to `main` |
 | 2026-10-24 | BLOG-06 | User + Assistant | Replaced the induction post banner and card with the supplied images and aligned the page to title → banner → text. Preserved the article body byte-for-byte (12,799 bytes; SHA-256 `bebb90737fb581970793635902457d5112b0a6fe08f56aa9b8942dda3055bfd6`). Build, both GitHub Actions runs, public article/Blog pages, and both images succeeded. Done. | `665603d`, `0c65a08`; pushed to `main` |
 | 2026-10-24 | BLOG-05 | User + Assistant | Replaced the induction-cooking article with the supplied Markdown verbatim. Confirmed the body is byte-for-byte identical (12,797 bytes); build, GitHub Actions, live article, Blog listing, and images succeeded. Done. | `d76471e`; pushed to `main` |
 | 2026-10-24 | BLOG-04 | User + Assistant | Rewrote and published the induction-cooking article with current Pakistan energy prices, checked calculations, new cover/card art, and a final LPG wording correction. Done. | `370d160`, `1e8bc46`; pushed to `main` |
