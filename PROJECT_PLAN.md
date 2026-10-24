@@ -107,6 +107,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
+| CONTENT-01 | Create pages and content | Consolidate writing guidance and add a reminder for future website and blog copy | User + Assistant | Done | Consolidated the three supplied files into `WRITING_GUIDELINES.md`, added the required read-before-writing reminder to `AGENTS.md`, and linked the guide from the README. |
 | BLOG-03 | Maintain | Replace the MEBL article cover and card artwork | User + Assistant | Done | Converted the supplied 1254×1254 card image and 1774×887 cover to versioned WebP assets. Updated the MEBL post, shared card references, cover dimensions/ratio, alt text, and Open Graph image; article copy is unchanged. Pushed commit `99729aa` to `main`, triggering the existing publishing workflow. |
 | DESIGN-06 | Review and refine | Make the homepage header transparent | Assistant | Done | Added a transparent background override to Home only. Nav text colors are unchanged; blog and article headers retain their near-black background. Build and GitHub Actions passed; the live homepage computes to transparent while the blog header remains near-black. |
 | DESIGN-05 | Review and refine | Clean up homepage footer spacing and correct the content layout | Assistant | Done | Reset inherited footer flex styles on Home so the social section and copyright row stack in the centered 1,200px content area. `npm run build` succeeded; GitHub Actions passed; public page serves the new CSS and rendered footer at 1,200px wide without horizontal overflow. |
@@ -148,6 +149,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
+| 2026-10-24 | CONTENT-01 | Supplied good and weak writing examples plus general writing instructions, and asked for one cleaned-up guide with a reminder for future site writing. | Consolidated their transferable guidance for the site's personal voice, audience, and investing topics in `WRITING_GUIDELINES.md`. | Done |
 | 2026-10-24 | BLOG-03 | Supplied new 2:1 and 1:1 images for the MEBL article and its cards. | Converted and applied as the MEBL article cover and shared card image; pushed to `main` in commit `99729aa`. | Done |
 | 2026-10-23 | DESIGN-06 | Asked to remove `background: var(--near-black)` from `.site-header`, clarified that nav link colors should remain unchanged, then limited the change to the homepage. | Homepage header background computes to transparent; nav color is unchanged, and the blog header remains near-black. | Done |
 | 2026-10-23 | DESIGN-05 | Shared a screenshot circling the footer and asked to clean up spacing and fix text crowding against the edges. | Footer rows now stack in the centered 1,200px container; verified on the live site with no horizontal overflow. | Done |
@@ -169,6 +171,8 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
+| 2026-10-24 | User + Assistant | CONTENT-01 | Completed `WRITING_GUIDELINES.md` for public-facing site and blog copy, added the read-before-writing instruction in `AGENTS.md`, and linked the guide from `README.md`. |
+| 2026-10-24 | User + Assistant | CONTENT-01 | Started consolidating the three supplied writing reference files into one project guide and adding a reminder to read it before future website copy or blog writing. |
 | 2026-10-24 | User + Assistant | BLOG-03 | Completed the MEBL artwork update with versioned 1774×887 cover and 1254×1254 card WebP assets. Updated the article cover ratio, alt descriptions, and Open Graph image while leaving article copy unchanged. Pushed commit `99729aa` to `main`, triggering the existing publishing workflow. |
 | 2026-10-24 | User + Assistant | BLOG-03 | Started replacing the MEBL post's cover and shared card artwork with the owner's newly supplied 2:1 and 1:1 images; preserve the article copy. |
 | 2026-10-23 | Assistant | DESIGN-06 | Added a transparent background override to the homepage header only. Preserved the original nav text color and blog/article header backgrounds. `npm run build` succeeded; GitHub Actions passed; live homepage and Blog computed styles confirmed the homepage is transparent and Blog remains near-black. |
@@ -201,6 +205,7 @@ Record decisions that affect scope, design, implementation, or launch. Add newes
 
 | Date | Decision | Reason | Impact / follow-up |
 |---|---|---|---|
+| 2026-10-24 | Use `WRITING_GUIDELINES.md` as the shared reference for future public-facing website and blog writing. | The owner supplied three writing reference files and asked for one cleaned-up guide with a reminder for future work. | Read the guide before writing or editing site copy; follow task-specific instructions and exact-copy requirements first. |
 | 2026-10-23 | Use near-black (`#100F0F`), off-white (`#F2F0EF`), and vivid red (`#D94B3D`) as the website palette. | The owner selected only these colors from a supplied reference and explicitly excluded its layout and other design features. | Keep the existing site layout and typography; use deep red for small text on light backgrounds and reserve performance colors for financial data. |
 | 2026-10-23 | Author blog posts as Markdown pages under `src/pages/blog/`. | The site uses Astro and the owner asked to publish a first long-form post. | Astro generates static post pages; frontmatter drives the blog index and homepage cards without client-side JavaScript. |
 | 2026-10-23 | Preserve the MEBL article text exactly as supplied by the owner. | The owner explicitly instructed not to change the blog text. | Present the provided title, analysis, tables, YouTube links, and disclaimer without editorial changes. |

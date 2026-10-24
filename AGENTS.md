@@ -1,6 +1,7 @@
 # Project instructions
 
 - Before starting project work, read `PROJECT_PLAN.md`. Reading it is compulsory; follow its current scope, decisions, task tracker, and open questions.
+- Before writing or editing public-facing website copy or blog text, read `WRITING_GUIDELINES.md` and follow it alongside the owner's task-specific instructions.
 - Keep `PROJECT_PLAN.md` updated as tasks are started, completed, deferred, or descoped, including work the user completes or provides.
 - Record the history of every project task in the **Task history** section below. Add one entry per task, including user-provided decisions and work, with its date, task ID, owner, outcome/status, and commit/push reference. Add new entries at the top; never erase completed history. Record the current task as `this commit` before its commit hash exists, then treat the resulting Git commit and push as its reference.
 - After each task the user requests is completed, commit the project changes and push them to the GitHub repository. If GitHub access or a configured remote is unavailable, report the blocker and leave the changes committed locally when possible.
@@ -9,6 +10,7 @@
 
 | Date | Task ID | Owner | Task and outcome/status | Commit / push reference |
 |---|---|---|---|---|
+| 2026-10-24 | CONTENT-01 | User + Assistant | Consolidated the supplied writing examples and instructions into `WRITING_GUIDELINES.md`; added a future-writing reminder here and project references. Done. | `this commit`; push after completion |
 | 2026-10-24 | BLOG-03 | User + Assistant | User supplied new 2:1 cover and 1:1 card artwork for the MEBL post. Converted and applied versioned WebP assets, updated the cover ratio and image descriptions, kept article text unchanged, and pushed the update. Done. | `99729aa`; pushed to `main` |
 | 2026-10-23 | DESIGN-06 | User + Assistant | User asked for a transparent header, specified that nav colors must remain unchanged, and limited the change to the homepage. Added a transparent homepage header override; blog/article headers retain their original fill. Build, GitHub Actions, and live computed styles passed. Done. | `8b63be9`; this commit |
 | 2026-10-23 | DESIGN-05 | Assistant | User reported crowded homepage footer spacing and text against the screen edges. Reset inherited global flex styles so the homepage footer stacks its two rows inside the centered 1,200px column. Build and live verification succeeded; GitHub Actions passed. Done. | `5bbdff1`; this commit |

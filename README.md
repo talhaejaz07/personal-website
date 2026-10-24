@@ -14,6 +14,7 @@ The site runs in Docker on the owner's Ubuntu home server. Nginx serves it on LA
 
 - [Project plan and task tracker](PROJECT_PLAN.md) — scope, decisions, tasks, and progress.
 - [Agent instructions and task history](AGENTS.md) — required project workflow and completed-task history.
+- [Website and blog writing guidelines](WRITING_GUIDELINES.md) — guidance to read before creating or editing public-facing copy.
 
 ## Development
 
