@@ -107,7 +107,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
-| CONTENT-01 | Create pages and content | Consolidate writing guidance and add a reminder for future website and blog copy | User + Assistant | Done | Consolidated the three supplied files into `WRITING_GUIDELINES.md`, added the required read-before-writing reminder to `AGENTS.md`, and linked the guide from the README. |
+| CONTENT-01 | Create pages and content | Consolidate writing guidance and add a reminder for future website and blog copy | User + Assistant | Done | Consolidated the three supplied files into `WRITING_GUIDELINES.md`, added the required read-before-writing reminder to `AGENTS.md`, linked the guide from the README, and pushed commit `14822f2` to `main`. |
 | BLOG-03 | Maintain | Replace the MEBL article cover and card artwork | User + Assistant | Done | Converted the supplied 1254×1254 card image and 1774×887 cover to versioned WebP assets. Updated the MEBL post, shared card references, cover dimensions/ratio, alt text, and Open Graph image; article copy is unchanged. Pushed commit `99729aa` to `main`, triggering the existing publishing workflow. |
 | DESIGN-06 | Review and refine | Make the homepage header transparent | Assistant | Done | Added a transparent background override to Home only. Nav text colors are unchanged; blog and article headers retain their near-black background. Build and GitHub Actions passed; the live homepage computes to transparent while the blog header remains near-black. |
 | DESIGN-05 | Review and refine | Clean up homepage footer spacing and correct the content layout | Assistant | Done | Reset inherited footer flex styles on Home so the social section and copyright row stack in the centered 1,200px content area. `npm run build` succeeded; GitHub Actions passed; public page serves the new CSS and rendered footer at 1,200px wide without horizontal overflow. |
@@ -171,7 +171,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
-| 2026-10-24 | User + Assistant | CONTENT-01 | Completed `WRITING_GUIDELINES.md` for public-facing site and blog copy, added the read-before-writing instruction in `AGENTS.md`, and linked the guide from `README.md`. |
+| 2026-10-24 | User + Assistant | CONTENT-01 | Completed `WRITING_GUIDELINES.md` for public-facing site and blog copy, added the read-before-writing instruction in `AGENTS.md`, and linked the guide from `README.md`. Pushed commit `14822f2` to `main`. |
 | 2026-10-24 | User + Assistant | CONTENT-01 | Started consolidating the three supplied writing reference files into one project guide and adding a reminder to read it before future website copy or blog writing. |
 | 2026-10-24 | User + Assistant | BLOG-03 | Completed the MEBL artwork update with versioned 1774×887 cover and 1254×1254 card WebP assets. Updated the article cover ratio, alt descriptions, and Open Graph image while leaving article copy unchanged. Pushed commit `99729aa` to `main`, triggering the existing publishing workflow. |
 | 2026-10-24 | User + Assistant | BLOG-03 | Started replacing the MEBL post's cover and shared card artwork with the owner's newly supplied 2:1 and 1:1 images; preserve the article copy. |
