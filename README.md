@@ -4,11 +4,11 @@ This repository contains the planning and, as work progresses, the source code f
 
 ## Project status
 
-The first Astro homepage is live at `https://ejazhome.com/`. It presents PSX investing as a major interest alongside technology, engineering, and green energy, and links to X and YouTube. The site uses the approved Barlow Condensed, DM Sans, and optional DM Mono typography with a near-black, off-white, and vivid red palette. A live HTTPS check returned HTTP 200 with the expected page title and hero portrait.
+The Astro website and blog are live at `https://ejazhome.com/` on Cloudflare Pages. The site presents PSX investing as a major interest alongside technology, engineering, and green energy, and links to X and YouTube. It uses the approved Barlow Condensed, DM Sans, and optional DM Mono typography with a near-black, off-white, and vivid red palette.
 
 ## Hosting
 
-The site runs in Docker on the owner's Ubuntu home server. Nginx serves it on LAN port `8085`; the Cloudflare Tunnel maps `ejazhome.com` to `http://192.168.18.100:8085`. Public HTTPS access is working.
+The site is hosted on Cloudflare Pages at `https://ejazhome.com/`. The `ejaz-home` Tunnel is shared with Paperless and n8n and remains in use for those applications; the website is served directly by Pages.
 
 ## Project records
 
@@ -20,28 +20,9 @@ The site runs in Docker on the owner's Ubuntu home server. Nginx serves it on LA
 
 Install dependencies with `npm install`, then start the local development server with `npm run dev`. Use `npm run build` to generate the static site in `dist/`, and `npm run preview` to preview that build locally.
 
-## Home server deployment
+## Cloudflare Pages deployment
 
-Pushes to `main` trigger GitHub Actions to build the Astro site and publish the Docker image to GitHub Container Registry. The home server pulls the public image without registry credentials. A systemd timer checks for new images every 60 seconds and updates only the `personal-website` container. The existing Watchtower service for other apps remains unchanged.
-
-To publish a change, push it to `main`. GitHub Actions builds and publishes the image, and the server updates within about a minute after the build completes. The site is available on port `8085`; the Cloudflare Tunnel service URL is `http://192.168.18.100:8085`.
-
-Install the timer once on the Ubuntu server, from the project directory:
-
-```sh
-cd /home/talha/personal-website
-sudo install -m 644 deploy/systemd/personal-website-update.service /etc/systemd/system/personal-website-update.service
-sudo install -m 644 deploy/systemd/personal-website-update.timer /etc/systemd/system/personal-website-update.timer
-sudo systemctl daemon-reload
-sudo systemctl enable --now personal-website-update.timer
-```
-
-For a manual refresh, run:
-
-```sh
-docker compose pull personal-website
-docker compose up -d --no-deps personal-website
-```
+The Cloudflare Pages project is connected to this GitHub repository with `main` as its production branch. Its build command is `npm run build`, and its build output directory is `dist/` (repository root). Cloudflare builds and deploys pushes to `main`; pull requests receive preview deployments.
 
 
 
