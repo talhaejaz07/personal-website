@@ -6,7 +6,7 @@ This is the living project record for the personal website. It documents the wor
 
 - **Project:** Personal website
 - **Goal:** Plan, build, verify, and publish a personal website that represents its owner and serves the goals we agree on.
-- **Current state:** The Astro homepage, blog index, and first MEBL article are live on the home server at `https://ejazhome.com/` through Cloudflare Tunnel. Homepage, blog, post, and title images returned HTTP 200 on 2026-10-23.
+- **Current state:** The Astro homepage, blog index, MEBL article, and induction-cooking article are live on the home server at `https://ejazhome.com/` through Cloudflare Tunnel. The homepage, blog, articles, and their images returned HTTP 200 on 2026-10-24.
 - **Technology:** Astro with npm, generating a static site; blog posts are authored as Markdown pages in `src/pages/blog/`.
 - **Audience:** Friends and general visitors.
 - **Purpose:** Introduce who the owner is, showcase social profiles, and share writing through a blog.
@@ -107,7 +107,7 @@ Status values: `Not started`, `In progress`, `Blocked`, `Done`, `Deferred`, `Des
 
 | ID | Phase | Task | Owner | Status | Notes / completion evidence |
 |---|---|---|---|---|---|
-| BLOG-06 | Maintain | Replace the induction post's banner and card art; match the first post's title → banner → text order while preserving the article text | User + Assistant | In progress | Use the supplied 1774×887 banner and 1254×1254 card image. Hide only the duplicate in-body heading in presentation; preserve Markdown wording. |
+| BLOG-06 | Maintain | Replace the induction post's banner and card art; match the first post's title → banner → text order while preserving the article text | User + Assistant | Done | Converted the supplied 1774×887 banner and 1254×1254 card to versioned WebP; updated image metadata and rendered the frontmatter title before the banner, then the article. Hid only the duplicate in-body heading. The 12,799-byte Markdown body hash is unchanged. Build, both GitHub Actions runs, public article/Blog pages, and both images returned success/HTTP 200. Pushed `665603d` and `0c65a08` to `main`. |
 | COMMENTS-01 | Maintain | Add comments to individual blog posts | User + Assistant | Deferred | The owner decided the current readership is too small to justify a comment section and its moderation. Revisit if readership grows. Remark42 with Google sign-in was discussed as a possible future self-hosted option; no implementation now. |
 | BLOG-05 | Maintain | Replace the induction-cooking article with the owner's supplied Markdown verbatim | User + Assistant | Done | Replaced the article body with the attached Markdown unchanged (12,797 bytes; SHA-256 matched the source). Updated only surrounding metadata and layout so the supplied heading appears once. Local build and GitHub Actions succeeded; the live article, Blog listing, and both images returned HTTP 200. Pushed `d76471e` to `main`. |
 | CONTENT-03 | Review and refine | Broaden website copy to reflect investing plus technology, engineering, green energy, and other interests | User + Assistant | Done | Updated homepage, Blog index, writing guide, README, and project content direction. PSX investing remains a major topic; technology, engineering, green energy, and other interests are also represented. Existing blog post text remains unchanged. Pushed commit `ae548bd` to `main`. |
@@ -155,7 +155,7 @@ Use this section to track work you complete or provide. Add the newest entry at 
 
 | Date | Related task ID | Work you completed / provided | Outcome or evidence | Follow-up |
 |---|---|---|---|---|
-| 2026-10-24 | BLOG-06 | Supplied matching 2:1 banner and 1:1 card images and asked for the induction post to follow the first post's title → banner → text order. | In progress; the supplied text is to remain unchanged. | Replace both images and align the article layout. |
+| 2026-10-24 | BLOG-06 | Supplied matching 2:1 banner and 1:1 card images and asked for the induction post to follow the first post's title → banner → text order. | Replaced the card and banner with the supplied images; the title now precedes the banner and article text. The Markdown body remained byte-for-byte unchanged. Build, GitHub Actions, and public article, Blog listing, and image checks passed. | Done; commits `665603d` and `0c65a08` pushed to `main` |
 | 2026-10-24 | BLOG-05 | Supplied a Markdown file for the induction-cooking blog post and explicitly asked for its text to be used unchanged. | Replaced the article body byte-for-byte; verified matching 12,797-byte body, successful build/deployment, live article and Blog listing, and cover/card images. | Done |
 | 2026-10-24 | BLOG-04 | Supplied an earlier article on induction cooktops and asked to update facts, improve the writing, and finalise it for publication today. | Rewrote and published the article with linked current sources, corrected cost comparisons, and new cover/card artwork. | Done |
 | 2026-10-24 | COMMENTS-01 | Decided the current readership is too small to justify a comment section. | Deferred comment implementation; discussed Remark42 with Google sign-in as a possible future self-hosted option. | Revisit if readership grows |
@@ -183,7 +183,7 @@ Record meaningful project progress here, including implementation and review wor
 
 | Date | Owner | Task ID | Update |
 |---|---|---|---|
-| 2026-10-24 | User + Assistant | BLOG-06 | Started replacing the induction article card and banner with the owner's new images and aligning its page order with the first blog post; article text must remain unchanged. |
+| 2026-10-24 | User + Assistant | BLOG-06 | Replaced the induction article banner/card with the supplied 2:1 and 1:1 images, displayed the title before the banner and text, and preserved the Markdown body byte-for-byte. Build and both publishing runs passed; public article, Blog listing, and images returned HTTP 200. Pushed `665603d` and `0c65a08` to `main`. |
 | 2026-10-24 | User + Assistant | BLOG-05 | Replaced the induction-cooking article with the attached Markdown byte-for-byte, adjusted the layout to show the supplied title once, and verified the deployed article, Blog listing, and images. Local build and GitHub Actions succeeded; all public routes returned HTTP 200. Pushed `d76471e` to `main`. |
 | 2026-10-24 | User + Assistant | BLOG-04 | Rewrote and published the induction-cooking article, updated its price assumptions and sources, added wide and square artwork, and verified the live post, Blog listing, and images. Local build and GitHub Actions succeeded; public routes returned HTTP 200. Pushed `370d160` and final copy correction `1e8bc46` to `main`. |
 | 2026-10-24 | User + Assistant | COMMENTS-01 | Deferred a comment system because the current readership does not justify the added infrastructure and moderation; recorded Remark42 as a possible future option. |
