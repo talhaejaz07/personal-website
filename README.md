@@ -15,6 +15,7 @@ The site is hosted on Cloudflare Pages at `https://ejazhome.com/`. The `ejaz-hom
 - [Project plan and task tracker](PROJECT_PLAN.md) — scope, decisions, tasks, and progress.
 - [Agent instructions and task history](AGENTS.md) — required project workflow and completed-task history.
 - [Website and blog writing guidelines](WRITING_GUIDELINES.md) — guidance to read before creating or editing public-facing copy.
+- [Design system and review](DESIGN_SYSTEM.md) — editorial styling, mobile layout rules, shared components, and verification evidence.
 
 ## Development
 
