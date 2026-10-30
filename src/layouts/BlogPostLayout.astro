@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import '../styles/journal.css';
 import type { MarkdownLayoutProps } from 'astro';
+import TableOfContents from '../components/TableOfContents.astro';
 
 interface Frontmatter {
   title: string;
@@ -63,6 +64,7 @@ const date = new Date(`${frontmatter.pubDate}T00:00:00`).toLocaleDateString('en-
         <figure class="article-cover">
           <img src={frontmatter.coverImage} alt={frontmatter.coverImageAlt} width="1774" height="887" fetchpriority="high" decoding="async" />
         </figure>
+        <TableOfContents headings={Astro.props.headings} />
         <div class="prose">
           <slot />
         </div>

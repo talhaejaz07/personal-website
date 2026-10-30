@@ -1,0 +1,129 @@
+---
+import type { MarkdownHeading } from 'astro';
+import ContentsList, { type Section } from './ContentsList.astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings = [] } = Astro.props;
+const sections: Section[] = [];
+const stack: { depth: number; children: Section[] }[] = [{ depth: 1, children: sections }];
+
+for (const heading of headings.filter(({ depth }) => depth > 1)) {
+  while (stack.length > 1 && stack[stack.length - 1].depth >= heading.depth) stack.pop();
+  const section: Section = { text: heading.text, slug: heading.slug, children: [] };
+  stack[stack.length - 1].children.push(section);
+  stack.push({ depth: heading.depth, children: section.children });
+}
+---
+
+{sections.length > 0 && (
+  <details class="article-toc">
+    <summary>
+      <span class="article-toc__heading">
+        <svg class="article-toc__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M8 6h13M8 12h13M8 18h9M3 6h.01M3 12h.01M3 18h.01" stroke-linecap="round" />
+        </svg>
+        <span>Table of contents</span>
+      </span>
+      <span class="article-toc__count">{sections.length} {sections.length === 1 ? 'section' : 'sections'}</span>
+      <span class="article-toc__toggle" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </span>
+    </summary>
+    <nav class="article-toc__links" aria-label="Table of contents">
+      <ContentsList sections={sections} />
+    </nav>
+  </details>
+)}
+
+<style is:global>
+  .article-page .article-toc {
+    max-width: 720px;
+    margin: 0 auto clamp(40px, 5vw, 64px);
+    border-block: 1px solid var(--line);
+    background: rgb(255 255 255 / 45%);
+    interpolate-size: allow-keywords;
+  }
+
+  .article-page .article-toc summary {
+    display: flex;
+    min-height: 80px;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 24px;
+    cursor: pointer;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .article-page .article-toc summary::-webkit-details-marker { display: none; }
+  .article-page .article-toc summary::marker { content: ''; }
+  .article-page .article-toc summary:hover .article-toc__heading { color: var(--deep-red); }
+  .article-page .article-toc summary:focus-visible { outline-offset: 3px; }
+
+  .article-page .article-toc__heading {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    transition: color 180ms ease;
+  }
+
+  .article-page .article-toc__icon { flex-shrink: 0; color: var(--deep-red); }
+  .article-page .article-toc__count { color: var(--muted); font-family: var(--mono); font-size: 10px; white-space: nowrap; }
+
+  .article-page .article-toc__toggle {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--deep-red);
+    transition: transform 260ms ease, background 180ms ease, border-color 180ms ease;
+  }
+
+  .article-page .article-toc[open] .article-toc__toggle { transform: rotate(180deg); background: var(--paper); border-color: var(--deep-red); }
+  .article-page .article-toc::details-content { block-size: 0; opacity: 0; overflow: clip; transition: block-size 300ms ease, opacity 200ms ease, content-visibility 300ms allow-discrete; }
+  .article-page .article-toc[open]::details-content { block-size: auto; opacity: 1; }
+  .article-page .article-toc__links { padding: 0 24px 22px; }
+  .article-page .article-toc__links > ol { border-top: 1px solid var(--line); padding-top: 14px; }
+  .article-page .article-toc ol { margin: 0; padding-left: 0; list-style: none; }
+  .article-page .article-toc ol ol { margin: 0 0 8px 9px; padding-left: 18px; border-left: 1px solid var(--line); }
+  .article-page .article-toc li { margin: 0; }
+
+  .article-page .article-toc__links a {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 10px 8px;
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+    transition: color 180ms ease, background 180ms ease;
+  }
+
+  .article-page .article-toc__links ol ol a { color: var(--muted); font-size: 14px; font-weight: 400; }
+  .article-page .article-toc__links a:hover { background: rgb(183 58 46 / 5%); color: var(--deep-red); text-decoration: underline; text-underline-offset: 4px; }
+  .article-page .article-toc__links a:focus-visible { outline-offset: -2px; color: var(--deep-red); }
+  .article-page .prose :is(h2, h3, h4, h5, h6) { scroll-margin-top: 32px; }
+
+  @media (max-width: 560px) {
+    .article-page .article-toc summary { min-height: 76px; padding: 16px; gap: 10px; }
+    .article-page .article-toc__heading { gap: 10px; font-size: 15px; }
+    .article-page .article-toc__count { display: none; }
+    .article-page .article-toc__links { padding: 0 16px 16px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .article-page .article-toc::details-content { transition: none; }
+  }
+</style>

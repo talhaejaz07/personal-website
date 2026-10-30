@@ -21,6 +21,8 @@ The site is hosted on Cloudflare Pages at `https://ejazhome.com/`. The `ejaz-hom
 
 Install dependencies with `npm install`, then start the local development server with `npm run dev`. Use `npm run build` to generate the static site in `dist/`, and `npm run preview` to preview that build locally.
 
+Blog posts live in `src/pages/blog/` and must use `src/layouts/BlogPostLayout.astro`. The layout automatically adds a collapsed, expandable table of contents below the cover using the post's H2–H6 headings. No manual list or per-post setup is needed. Section links and the disclosure work without JavaScript; supported browsers animate expansion, with reduced-motion preferences respected. Posts without section headings omit the empty panel.
+
 ## Cloudflare Pages deployment
 
 The Cloudflare Pages project is connected to this GitHub repository with `main` as its production branch. Its build command is `npm run build`, and its build output directory is `dist/` (repository root). Cloudflare builds and deploys pushes to `main`; pull requests receive preview deployments.

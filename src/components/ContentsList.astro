@@ -1,0 +1,22 @@
+---
+export interface Section {
+  text: string;
+  slug: string;
+  children: Section[];
+}
+
+interface Props {
+  sections: Section[];
+}
+
+const { sections } = Astro.props;
+---
+
+<ol>
+  {sections.map((section) => (
+    <li>
+      <a href={`#${section.slug}`}>{section.text}</a>
+      {section.children.length > 0 && <Astro.self sections={section.children} />}
+    </li>
+  ))}
+</ol>
