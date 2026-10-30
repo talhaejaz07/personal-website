@@ -57,3 +57,8 @@ The production build passed all five routes. A 20-case browser matrix—every ro
 The owner supplied a dark portrait-and-name reference and requested a more attractive hero. This supersedes the earlier separate portrait column for the hero only. Large Barlow Condensed name lettering and a red interests subtitle share a stage with the existing transparent portrait. The rectangular image panel and decorative research labels are removed. Narrow screens retain the overlap with the face above the name and supporting copy below. Existing palette, fonts, portrait bytes, supporting copy, all other sections, and articles remain intact. No client-side scripts or new assets were added.
 
 Validation: all five routes build; browser checks at 320, 360, 390, 430, 760, 768, 1024, and 1440px show no page overflow and a fitting H1. Hero navigation and actions meet 44px targets, and scroll navigation reaches Focus. Viewports are simulated browser sizes.
+
+
+## Hero revert — 2026-10-30 (HERO-04)
+
+The owner rejected HERO-03 and requested a revert. The homepage source and CSS are restored exactly from `9d0358b`, bringing back the DESIGN-07 separate portrait column and original headline. The HERO-03 section above is historical and no longer describes the active design. Blog pages and their expandable contents remain unchanged.
