@@ -50,3 +50,10 @@ The shared `BlogCard` keeps square artwork intact, places its category below the
 ## Verification record
 
 The production build passed all five routes. A 20-case browser matrix—every route at 320, 390, 768, and 1,440px—passed page-overflow checks, showed one visible H1 per page, and retained navigation targets of at least 44×44px. Home also passed 360, 430, and 1,024px. These are simulated viewports, not physical-device tests. All 20 checked local page/asset URLs returned HTTP 200. Keyboard ArrowRight moved a table's local scroll position by 40px; focus outlines and the skip link were verified. Reduced-motion emulation confirmed automatic scrolling and zero-duration button transitions. Non-style Astro source, article Git blobs, and existing images remain unchanged. MEBL's working checkout uses CRLF while its stored Git content is unchanged. Implementation `210f02f` was pushed to `main` and deployed through the existing Cloudflare Pages pipeline. All five live pages and 23 checked page/asset URLs returned HTTP 200 and matched the local production build byte-for-byte.
+
+
+## Homepage hero update — 2026-10-30 (HERO-03)
+
+The owner supplied a dark portrait-and-name reference and requested a more attractive hero. This supersedes the earlier separate portrait column for the hero only. Large Barlow Condensed name lettering and a red interests subtitle share a stage with the existing transparent portrait. The rectangular image panel and decorative research labels are removed. Narrow screens retain the overlap with the face above the name and supporting copy below. Existing palette, fonts, portrait bytes, supporting copy, all other sections, and articles remain intact. No client-side scripts or new assets were added.
+
+Validation: all five routes build; browser checks at 320, 360, 390, 430, 760, 768, 1024, and 1440px show no page overflow and a fitting H1. Hero navigation and actions meet 44px targets, and scroll navigation reaches Focus. Viewports are simulated browser sizes.
